@@ -108,6 +108,9 @@ function toggleMobileMenu() {
     }
 }
 
+// Mobile breakpoint constant (matches CSS media query)
+const MOBILE_BREAKPOINT = 768;
+
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
     const navbar = document.querySelector('.navbar');
@@ -131,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             const navbarNav = document.querySelector('.navbar-nav');
             const menuToggle = document.querySelector('.mobile-menu-toggle');
-            if (navbarNav && window.innerWidth <= 768) {
+            if (navbarNav && window.innerWidth <= MOBILE_BREAKPOINT) {
                 navbarNav.classList.remove('active');
                 if (menuToggle) {
                     menuToggle.textContent = '☰';
