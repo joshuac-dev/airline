@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Better Airline Club</title>
+<style>
+body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto; }
+img { max-width: 100%; height: auto; }
+table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+th { background-color: #f2f2f2; }
+.wikitable { border: 1px solid #ccc; }
+</style>
+</head>
+<body>
+<h1>Better Airline Club</h1>
+<hr>
+<div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><p>Better Airline Club is a combination of mods, including "AC Frontend Mod/Better Airline Club v1" by Torus Air/Aphix, "Cost Per PAX" portion by Alrianne, Service funding cost by Toast, Default price&#160;% and fuel calculation from Pineapple Air, with help from Gemini 2.0/2.5, and maintained by Fly or Die. It adds additional columns on the routes page, shows cost-per-pax estimations, default prices in research tab, among other enhancements. 
+<aside role="region" class="portable-infobox pi-background pi-border-color pi-theme-wikia pi-layout-default">
+<h2 class="pi-item pi-item-spacing pi-title pi-secondary-background" data-source="title1">Better Airline Club</h2>
+
+<figure class="pi-item pi-image" data-source="image1">
+	<a href="https://static.wikia.nocookie.net/airline-club/images/0/04/AC_Frontend_Mod_.png/revision/latest?cb=20210928022641" class="image image-thumbnail" title="AC Frontend Mod ">
+		<img src="https://static.wikia.nocookie.net/airline-club/images/0/04/AC_Frontend_Mod_.png/revision/latest/scale-to-width-down/268?cb=20210928022641" srcset="https://static.wikia.nocookie.net/airline-club/images/0/04/AC_Frontend_Mod_.png/revision/latest/scale-to-width-down/268?cb=20210928022641 1x, https://static.wikia.nocookie.net/airline-club/images/0/04/AC_Frontend_Mod_.png/revision/latest/scale-to-width-down/535?cb=20210928022641 2x" class="pi-image-thumbnail" data-relevant="1" alt="AC Frontend Mod " width="270" height="153" data-image-key="AC_Frontend_Mod_.png" data-image-name="AC Frontend Mod .png" />
+		
+	</a>
+	
+</figure>
+
+<div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="link">
+	
+		<h3 class="pi-data-label pi-secondary-font">Link</h3>
+	
+	<div class="pi-data-value pi-font"><a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="https://github.com/Bohaska/bac/raw/refs/heads/main/Better%20Airline%20Club.user.js">https://github.com/Bohaska/bac/raw/refs/heads/main/Better%20Airline%20Club.user.js</a></div>
+</div>
+
+<div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="author">
+	
+		<h3 class="pi-data-label pi-secondary-font">Author</h3>
+	
+	<div class="pi-data-value pi-font">Torus Air/Aphix, Alrianne, Toast, Fly or Die, Pineapple</div>
+</div>
+</aside>
+
+</p><p><br />
+</p>
+
+<h2><span id="Persistent_Install_.28recommended.29"></span><span class="mw-headline" id="Persistent_Install_(recommended)">Persistent Install (recommended)</span></h2>
+<ol><li>Download the Tampermonkey extension or similar.</li>
+<li>Click this link: <a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="https://github.com/Bohaska/bac/raw/refs/heads/main/Better%20Airline%20Club.user.js">https://github.com/Bohaska/bac/raw/refs/heads/main/Better%20Airline%20Club.user.js</a></li>
+<li>Click "install" when it asks if you want to install the script.</li>
+<li>If you are in Chrome (possibly in other browsers as well), make sure you have this setting enabled: <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.tampermonkey.net/faq.php?locale=en#:~:text=In%20desktop%20Chrome%2FEdge%20138,Manage%20Extension%22%20(2).&amp;text=Locate%20and%20enable%20the%20%22Allow%20User%20Scripts%22%20toggle.">https://www.tampermonkey.net/faq.php?locale=en#:~:text=In%20desktop%20Chrome%2FEdge%20138,Manage%20Extension"%20(2).&amp;text=Locate%20and%20enable%20the%20"Allow%20User%20Scripts"%20toggle</a></li>
+<li>Restart your browser after you've completed step 4.</li>
+<li>Open <a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="https://airline-club.com">https://airline-club.com</a> and you should see all the BAC enhancements!</li></ol>
+<h2><span class="mw-headline" id="Temporary_Install">Temporary Install</span></h2>
+<ol><li>Copy the code at <a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="https://github.com/Bohaska/bac/blob/main/Better%20Airline%20Club.user.js">https://github.com/Bohaska/bac/blob/main/Better%20Airline%20Club.user.js</a></li>
+<li>Open Airline Club tab</li>
+<li>Press F12 (or right click/inspect element anywhere on the page)</li>
+<li>Paste mod in the console part at the bottom of the Devtools next to the "&gt;"</li>
+<li>Press enter</li>
+<li><i>(in game)</i> Click the flights tab to see the new changes</li></ol>
+<h2><span class="mw-headline" id="Key_Changes">Key Changes</span></h2>
+<p>SF Column is changed to (SF-60%)/(100-40)%, since loyalist conversion only occurs when SF&gt;60%.
+</p><p>Profit shown is that after accounting for office SQ expenses, which the default game considers an "other expense". As a result, the sum of the profits in your routes tab equals flight profit - office SQ costs in Office and not simply flight profit.
+</p><p>Cost-per-pax estimations in "Market" page do not account for office SQ cost, and is slightly inaccurate for discounted planes. Cost-per-pax can be inaccurate at times for various other reasons as well.
+</p><p>Profit margin (revenue + profit/profit), profit per passenger, profit per flight and profit per flight duration.
+</p>
+<h2><span class="mw-headline" id="History">History</span></h2>
+<p>v1.0.1/1.0.2- These versions put more detail in your routes page. (Unkown difference) 
+</p><p>v.1.0.3- Things become color-coded, there is a shortcut to the oil tab from the top
+</p>
+<h3><span class="mw-headline" id="Version_Access">Version Access</span></h3>
+<p>Pre 1.0.3-<a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="https://pastebin.com/Mt0c3rq9">https://pastebin.com/Mt0c3rq9</a>, password: Cxwx5pmsV9
+</p><p>1.0.3-<a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="https://gist.github.com/aphix/fdeeefbc4bef1ec580d72639bbc05f2d#file-better-airline-club">https://gist.github.com/aphix/fdeeefbc4bef1ec580d72639bbc05f2d#file-better-airline-club</a>
+</p>
+<h2><span class="mw-headline" id="Gallery">Gallery</span></h2>
+<p><span class="mw-default-size" typeof="mw:File"><a href="https://static.wikia.nocookie.net/airline-club/images/0/04/AC_Frontend_Mod_.png/revision/latest?cb=20210928022641" class="mw-file-description image"><img src="https://static.wikia.nocookie.net/airline-club/images/0/04/AC_Frontend_Mod_.png/revision/latest?cb=20210928022641" decoding="async" loading="lazy" width="1279" height="725" class="mw-file-element" data-image-name="AC Frontend Mod .png" data-image-key="AC_Frontend_Mod_.png" data-relevant="1" /></a></span><br />
+</p></div>
+<hr>
+<footer><p>Original content from Airline Club Wiki. Licensed under CC-BY-SA.</p></footer>
+</body>
+</html>
