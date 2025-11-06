@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Airline Club Wiki</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="/index.html" class="navbar-brand">Airline Club Wiki</a>
+            <ul class="navbar-nav">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#aircraft">Aircraft</a></li>
+                <li><a href="#mechanics">Mechanics</a></li>
+                <li><a href="#world">World</a></li>
+                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="breadcrumbs">
+        <a href="/index.html">Home</a> <span>&gt;</span> <a href="/index.html#mechanics">Mechanics</a> <span>&gt;</span> <span>FAQ</span>
+    </div>
+
+    <main>
+        <h1>FAQ</h1>
+        
+<p>This is a compilation of (almost) every question that has been asked on Airline Club and what has been searched on in the wiki. Not all questions on here are "frequently" asked, but every question in here is useful. If you have any questions to ask, you can ask them in the Discord server (preferably after you tried ctrl/cmd+f on the FAQ, sorry we're bad at naming questions). If you have answers to add, you can edit the FAQ with a Fandom account (or without one if you want the whole world to know your IP Address forever).</p>
+<h2>Game Mechanics</h2>
+<h3>Are the weeks in-game as long as real life weeks?</h3>
+<p>Of course not! No one can wait 8 real-life weeks for their plane to be delivered. 1 week in game is around 40-50 minutes as of March 16th 2024. You can check how much time there is left before the next week on the top bar, the clock next to the date.</p>
+<h3>What does service quality do?</h3>
+<p>It determines how much service you provide for your passengers. Better service increases loyalty growth and attracts more passengers, but costs more to maintain. For low income countries (<30 income), service quality doesn't attract a lot of</p>
+<p>PAX</p>
+<p>(passengers) , but in high income countries (>40 income), service quality is very important. If your service quality is high, you will have to add more business and first class seats to offset the cost.</p>
+<h3>When will an inactive airline be reset?</h3>
+<p>Inactive airlines will be reset after 30</p>
+<p>consecutive</p>
+<p>days of inactivity if they have less than 100 rep, and after 180</p>
+<p>consecutive days</p>
+<p>of inactivity if they have more than 100 rep. Activity counts as just logging in. This may be reduced in v2.1, though still to be decided.</p>
+<h3>Why is (aircraft) better than (aircraft) when in real life...</h3>
+<p>Aircraft have been kept as close to their counterparts as possible. However, the dev has balanced some things out (e.g. fuel) for the sake of the game balance. If you find something like runway requirement to be off, do suggest a change to the Github. See section 6.2 as well.</p>
+<h3>Am I competing against real players?</h3>
+<p>Yes. Airline Club is not AM4, everyone is fighting for the same set amount of passengers & routes.</p>
+<h3>What is the unit of fuel in this game?</h3>
+<p>1 fuel burn costs $0.44 per flight minute for the first 90 minutes of flight, and costs $0.08 per flight minute for each additional minute beyond that.</p>
+<p>Fuel in this game is calculated by total</p>
+<p>flight time</p>
+<p>, so even though a plane's fuel burn/passenger may be higher, the plane's speed may cancel out that difference or even make it more efficient. In addition, when comparing planes, you should consider the cost of the plane as well, so even if a plane is very efficient, it may not be the best choice.</p>
+<p>You can download the Better Airline Club mod</p>
+<p>here</p>
+<p>to get an idea of the profitability. For the full formula when calculating fuel burn, please reference the</p>
+<p>Github</p>
+<p>or</p>
+<p>look at the</p>
+<p>Better Airline Club raw code</p>
+<p>It has a bug.</p>
+<h3>How are airport fees determined?</h3>
+<p>Airport fees are determined by the "airport power" of the airport, which consists of the airport population and income level. Essentially, the bigger the airports, the higher the airport fees.</p>
+<h3>How is base upkeep/upgrade cost determined?</h3>
+<p>Similar to airport fees, they are determined based on the "airport power" of the airport, consisting of the airport population multiplied by the city income level. The bigger the airport, the higher the upgrade/upkeep cost.</p>
+<h3>What do the different types of pax that show up in my survey mean?</h3>
+<p>There are different types of PAX that have different preferences (more dots=more focus on that particular trait when choosing a flight). See to the right an image taken from the survey page.</p>
+<h4>What are carefree pax?</h4>
+<p>These behave like budget pax, but don't care about price much. These unfortunately are no longer generated by the game, and are remnants of v1.</p>
+<h3>How is low load factor triggered?</h3>
+<p>Low load factor is triggered when 1)</p>
+<p>at least three</p>
+<p>airlines are on the route and 2) an airline has LF (load factor) below 50%. Routes need to be below 50% consistently for 52 weeks, and there have to be</p>
+<p>at least three</p>
+<p>airlines on the route for this to work. Sorry for the bold, I get asked this way too often.</p>
+<h3>Pax are not transferring internationally!</h3>
+<p>Countries need to have an openness of 7 or higher to allow passengers to travel from a second country to a third country through the country, also known as</p>
+<p>the 6th freedom of the air</p>
+<p>. For openness 6- countries, pax</p>
+<p>cannot</p>
+<p>use said country as a way point between two countries, no matter what.</p>
+<h3>What is happening with pax after they reach their destination? Stranded?</h3>
+<p>Each and every ticket sold in AC is a round trip ticket, and the demand reflects this as well. (eg: If it shows that there are 100 pax originating from JFK to LHR, it is assumed that the pax will take a flight in the same class on the same airline back to LHR.</p>
+<h3>Why do planes only fly for 4 days (5760 min) per week in game?</h3>
+<p>We aren't sure, but it's probably to simulate all the maintenance they do.</p>
+<h3>How is airport rep determined?</h3>
+<p>In simple terms, it's a combo of income, airport scale, population, charms, and if it's a gateway or not. For the full function written by our lovely friend FoD, see</p>
+<p>this link</p>
+<p>on discord.</p>
+<h2>Game Functionality</h2>
+<h3>How do you negotiate a flight with 10+ difficulty?</h3>
+<p>This often happens with negotiating international flights to countries with low openness. Try negotiating the route with only 1 frequency. If this still doesn't work, you can assign delegates to negotiate with the country and lower the difficulty. Another way is to start a campaign in the airport. This way is faster, but may be less efficient if the population of city the airport is in (eg: Tokyo), is massive.</p>
+<h3>What do you do if your delegates are all used to maintain bases?</h3>
+<p>This often happens when you don't earn enough</p>
+<p>REP</p>
+<p>(reputation) from championing airports. Close down bases that don't give you large amounts of rep and establishing a base in a big city. If you are located in an ultra-competitive area or a place without lots of rep, you may need to expand to another country or rebuild your airline.</p>
+<h3>Do I continue to get delegates every 25 reputation after 100 rep?</h3>
+<p>No, you get three delegates every 25 rep until 200 rep (eg: 100, 125, 150, 175, 200), and after that, it happens every 50 rep up to 550 rep.</p>
+<h3>What benefits do alliances give?</h3>
+<p>Alliance members participate in a code share (airport codes) agreement making passengers more likely to transfer among alliance members' flights. Additionally, alliances with 3 or more members benefit from a reputation boost depending on their ranking.</p>
+<h3>How do I get loyalists?</h3>
+<p>Loyalists are gained by providing flights with a high satisfaction factor (SF). Raise your SF by having lower prices, higher quality, and higher frequency.</p>
+<h3>How do I score points for the Olympics?</h3>
+<p>Each Olympics passenger carried counts as 1 point. If the passenger's trip has multiple legs on different airlines, the 1 point will be divided between each airline that carried the passenger. An airline that carried the passenger 10,000km and another airline that carried the passenger 100km will get the same amount of points.</p>
+<h3>How do oil contracts work?</h3>
+<p>If you have no oil contract (default), you will buy oil at your Current Inventory Price each week. Signing a contract allows you to lock in a price for the duration of the contract. The longer you sign, the closer the price will be to $70 (average/default price of fuel). Each week, any excess fuel will be sold, and if you need more fuel than the contract is signed for, it will be purchased at inventory price. Read more about oil</p>
+<p>here</p>
+<p>.</p>
+<h3>I bought an oil contract but I see no change to my profit in routes tab.</h3>
+<p>To compare flight profit, the profit in routes tab is always calculated using $70 oil price. However, income in the Office tab will update to reflect your oil contract, don't worry. This is intentional so that you don't have crazy fluctuations in the route section so you can actually monitor profit based on your LF/Ticket Prices/Stars/Plane.</p>
+<h3>I just started and I'm losing money.</h3>
+<p>New airlines have low awareness and loyalty. It takes time for passengers to notice you and start buying your tickets. You may not fill all your flights at first, but keep prices low enough and wait for a day or two, and you should be making money soon. Unless you made a really big mistake.</p>
+<h3>After I switched to a bigger plane, I make less money.</h3>
+<p>Bigger planes generally have lower profit margins, which means your earnings per passenger are much lower, while smaller planes have higher profit margins. This is just how the game is designed, and there's no workaround other than the usual tactics.</p>
+<h3>Why can't I find my flight in the search tab?</h3>
+<p>The search tab only shows routes that passengers actually used in the past week, not all possible routes. (eg: if you have JFK-LHR), but your route doesn't show up, it means all your passengers are either connecting through JFK or LHR (or both). If your route doesn't show up, it just means no one used it and all passengers were on connecting itineraries.</p>
+<h3>How do I add IFE (In Flight Entertainment) to my flights?</h3>
+<p>IFE and other service features are controlled by your overall service funding as well as your service star rating. Increase these service levels to provide more service features to your passengers. All that affects game play is the route's Quality rating.</p>
+<h3>I picked a starting option that includes a hefty loan and I'm losing money.</h3>
+<p>Don't worry, this is perfectly normal. Next time, pick the option that doesn't include a loan, Entrepreneurial Spirit.</p>
+<h2>Account/Airline</h2>
+<h3>How many airlines are allowed per account/per person?</h3>
+<p>One "account" is tied to one airline, and all users are allowed</p>
+<p>only</p>
+<p>two accounts. Patreon members are allowed one extra airline.</p>
+<p>Going over this limit will result in all of your accounts being banned!</p>
+<p>The moderators have tools to track this, so don't think you can get away with it.</p>
+<h3>What about "airline gifting"?</h3>
+<p>As of a recent rule change, account ownership transfers are not allowed, without exception. It is not permitted to gift or lend an airline to any other player.</p>
+<h3>How do I change my airline/alliance name?</h3>
+<p>If you don't have Patreon, "delete" your account and create a new one to change your airline name.</p>
+<p>If you do, go to the office menu and click the cog next to your airline name.</p>
+<h3>How do I remove/delete an account?.</h3>
+<p>There's no Delete Account button in AC, but it's possible to "delete" your account. Just bankrupt/rebuild the airline you want to delete and leave it as is. As long as you leave it abandoned, you should be fine. It will not count towards total airline limit. If you have issues, submit a support ticket in</p>
+<p>the Discord server</p>
+<p>.</p>
+<h3>How can I make another airline?</h3>
+<p>Sign up with a new account. You can use the same email you used to register your first airline.</p>
+<h3>How do I add/make a livery for my airline?</h3>
+<p>See this page</p>
+<p>here</p>
+<p>.</p>
+<h2>Gameplay</h2>
+<h3>When should I replace my planes?</h3>
+<p>Typically, smaller airlines/airlines with less premium pax replace around 40-55%, while larger, richer, and more premium-pax heavy airlines replace at 60-70% (mostly just Oneworld airlines). No one should be consistently replacing planes above 75% if you want to be successful.</p>
+<h3>What should I set my SQ (Service Quality) as?</h3>
+<p>This is of course partially personal preference, but generally, it is recommended to set it under 80. SQ is</p>
+<p>expensive</p>
+<p>. For budget airlines in low income countries (<30 income), it is recommended to set office SQ to 30-50. For airlines serving premium pax or high-income markets, it's recommended to set SQ between 45-60. For majorly premium airlines, anywhere from 60-75 is normal, though it depends on how much premium pax it transports.</p>
+<h2>Updates</h2>
+<h3>What did v2.1 add?</h3>
+<p>v2.1 introduced airport assets, alliance missions (which were scrapped due to balance issues), updated runways, buffed supersonic flights and more. Please see</p>
+<p>V2.1</p>
+<p>or read</p>
+<p>the developer's announcement</p>
+<p>for more info.</p>
+<h4>When was V2.1 released?</h4>
+<p>It was released on Christmas Day. A nice gift for all of us 🎅</p>
+<h3>When would the next world reset happen?</h3>
+<p>No one knows. We all simply hope.</p>
+<h2>Feature Requests</h2>
+<p>Please see</p>
+<p>Feature Requests</p>
+<p>for a catalog of already requested feature requests</p>
+<h2>Known bugs</h2>
+<h3>Why is the time estimate gone?</h3>
+<p>The timer disappears for 1 week after restarts/updates, as the estimate is based on the time from the previous week(s). Please be patient for 1 cycle and then the timer will appear once again.</p>
+<h3>Why do things get duplicated when I click them fast?</h3>
+<p>Check your internet connection, and stop clicking stuff so fast. The developer knows about this issue, and he knows how to fix it, but he won't fix it (because he has better things to do irl). Can make for some good laughs sometimes though, so I guess count that as a bonus. (Fly or die has made</p>
+<p>a nice video of this bug</p>
+<p>if you're interested).</p>
+<h3>I have the "For development purposes only" map.</h3>
+<p>It appears because AC is skipping on his map usage fee that he owes to Google. He will not fix it. Google Maps is just too expensive. He will not move to other map providers, as it is a waste of time. And he's</p>
+<p>very</p>
+<p>stubborn. Believe us, we tried.</p>
+<h3>My airport icons have disappeared. Hub icons disappeared. Airports disappeared.</h3>
+<p>It's usually a network issue. Reloading or trying on a different device or browser, or a restart on the device, usually fixes this. If the issue persists, and particularly if it happens among multiple people on different networks, please report to the #bug-reports channel on the discord.</p>
+<h3>Why do elite passengers flying in economy class make nonsensical feedback?</h3>
+<p>They act weird in economy class in general. The developer is not interested in fixing this.</p>
+<h3>Why don't I get new delegates when I reach 600 rep?</h3>
+<p>1) Dev ran out of names. 2) Prevent crazy world domination. 3) Dev never thought anyone would get past it. V2.1 will add two more levels, 600 rep and 650 rep, specifically.</p>
+<h2>Names/Abbreviations</h2>
+<p>Check</p>
+<p>here</p>
+<p>for a list of commonly used terms.</p>
+<h2>Miscellaneous</h2>
+<h3>My question is not here!</h3>
+<p>You can ask your question in the Discord server.</p>
+<h3>Where can I join the discord server?</h3>
+<p>You can join the discord server by clicking on the discord icon located on the top right of the screen when you play Airline Club. You can also join the discord server through</p>
+<p>this link.</p>
+<h3>I really like this game, how can I support it?</h3>
+<p>You can donate to the developer, Air Canada/Chocobo, on</p>
+<p>Patreon</p>
+<p>. All proceeds go entirely to maintaining the game (or some ice cream for AC). You can also edit the source code at Github (patsonluk/airline). If you do not have the ability to code and cannot donate money, you can check</p>
+<p>How to contribute to Airline Club</p>
+<p>for ways to improve the game. Lastly, you can support the game by spreading the word and getting your friends to play it!</p>
+<h3>How do you fix/add a missing airport/runway/city/airplane?</h3>
+<p>Please go to</p>
+<p>How to contribute to Airline Club</p>
+<p>and add/fix it yourself if you can. Changes to the airports/runways/cities/airplanes will be applied after v3 is released, which is sometime in 2024.</p>
+<p>If you can't or are too lazy, message "Fly or die" on Discord. I will try to fix them. May take a few years for the changes to show.</p>
+<h3>How can I work on fixing charms?</h3>
+<p>You can help by adding your suggestions to</p>
+<p>this google sheet</p>
+<p>. Make sure to fill out as many of the columns as you can so AC will have a better idea in the next update. No new charms will be added until a full game reset, which will be in 2024/2025 at the earliest. Please note that even if you add your suggestion to the google sheet, there are no guarantees and your suggestion may be left out.</p>
+<p>Original content from</p>
+<p>Airline Club Wiki</p>
+<p>. Licensed under CC-BY-SA.</p>
+    </main>
+
+    <footer class="footer">
+        <p>Original content from Airline Club Wiki. Licensed under CC-BY-SA.</p>
+        <p style="margin-top: 10px;">For more information about the Airline-Club game, visit <a href="https://www.airline-club.com/" target="_blank" rel="noopener noreferrer">www.airline-club.com</a></p>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

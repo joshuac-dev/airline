@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route - Airline Club Wiki</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="/index.html" class="navbar-brand">Airline Club Wiki</a>
+            <ul class="navbar-nav">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#aircraft">Aircraft</a></li>
+                <li><a href="#mechanics">Mechanics</a></li>
+                <li><a href="#world">World</a></li>
+                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="breadcrumbs">
+        <a href="/index.html">Home</a> <span>&gt;</span> <a href="/index.html#mechanics">Mechanics</a> <span>&gt;</span> <span>Route</span>
+    </div>
+
+    <main>
+        <h1>Route</h1>
+        
+<p>A route is what the airlines use to make money off of their airplanes. To access a route, click on a line on the</p>
+<p>world map</p>
+<p>, or go to the routes menu and select a route from there.</p>
+<h2>On the page</h2>
+<p>An example of a route detail page, graciously provided by Air Canada.</p>
+<p>The route details page has lots of information to take in, so here is a breakdown:</p>
+<h3>Current Details (Top Left)</h3>
+<p>This part of the details page describes the current details about the route.</p>
+<ul>
+<li>
+Departure and Arrival Locations- Gives you the
+country
+, city/town, and IATA code of the airport pairs.
+</li>
+<li>
+Flight code- These are generated in the order you make a route. If you delete a route (or multiple), those numbers will be reused.
+</li>
+<li>
+Distance- Length of the route in km and classification (see below).
+</li>
+<li>
+Airplane- Model of the airplane that is being used, and how many planes are on the route (number in parentheses).
+</li>
+<li>
+Quality
+- Route quality, determined by fleet age on the route, service star on the route, and overall service quality.
+</li>
+<li>
+Capacity- Shows how many Economy/Business/First class passengers you can have on the route, or future capacity of undelivered planes. Does not include last
+cycle
+'s passenger limit (see below).
+</li>
+<li>
+Edit/Cancel button- Opens the route edit screen, or closes the route details page.
+</li>
+</ul>
+<h3>History (Center Left)</h3>
+<p>Gives information about a particular route. Some of these are useful for troubleshooting your routes when they don't yield expected results.</p>
+<ul>
+<li>
+Price- Ticket prices from last cycle.
+</li>
+<li>
+Capacity- Maximum amount of passengers your route could hold.
+Not to be confused with the capacity in the top left section.
+</li>
+<li>
+Load Factor (LF)- Percentage of the capacity that was filled. Simply multiply the Capacity amount by the percentage (or move the decimal point over to the left two places) and round, to find out the amount of passengers that are transported.
+</li>
+<li>
+Profit/Revenue- Revenue is the money made by the flight (Passengers times Price), and Profit is the money made after costs are subtracted.
+</li>
+<li>
+Fuel/Crew/Airport/Depreciation/Compensation/Lounge Cost/Service Supplies/Maintenance Costs-  Costs that reduce the Revenue into Profit.
+</li>
+<li>
+Flight Delays/Cancellations- Delays add Compensation fees, Cancellations reduce the passengers for that week. See below for more details.
+</li>
+</ul>
+<p>Example of the Rival Details page.</p>
+<h3>Direct Competitions (Bottom Left)</h3>
+<p>This part gives information about your competitors on the route. It shows their Name, Prices, Capacity, Quality, and Frequency.</p>
+<p>There are two icons next to the title: a graph and a magnifying glass. The graph gives other competitors' history of capacity and ticket prices. Rival Details shows you and your rival's Loyalty/Awareness, and the network capacity.</p>
+<h3>Graphs (Right)</h3>
+<p>The right side are graphs that show Profits, Seat Consumptions (how many seats were sold), Revenue breakdown, and ticket price history (from top to bottom).  You can toggle between monthly and quarterly information.</p>
+<h2>Details</h2>
+<h3>Categories</h3>
+<p>Routes fall into different categories based on length and where they're going. They determine how many staff are used per route, and the capacity you can sustain before routes become harder to negotiate.</p>
+<h4>Domestic Routes</h4>
+<p>Routes that go from one airport to another in the same country will be classified as Domestic routes. For example, a flight from Berlin to Düsseldorf would be a Domestic route, as they are both airports in Germany.</p>
+<p>Overseas territories (Guam, Réunion, Bermuda, etc.) are considered to be separate entities and will not count as domestic routes.</p>
+<ul>
+<li>
+Routes less than 1,000 km in length are Short-haul Domestic. They fall under Frequency Cap I.
+</li>
+<li>
+Routes 1,000 km to 2,999 km in length are Medium-haul Domestic. They fall under Frequency Cap II.
+</li>
+<li>
+Routes more than 3,000 km in length are Long-haul Domestic. They fall under Frequency Cap II.
+</li>
+</ul>
+<h4>International Routes</h4>
+<p>Routes that start and end in airports from two different countries and are on the same continent would be classified as International. For example, flights from Bogotá to Buenos Aires are considered to be International (Colombia to Argentina).</p>
+<ul>
+<li>
+Routes less than 2,000 km in length are Short-haul International. They fall under Frequency Cap II.
+</li>
+<li>
+Routes 2,000 km to 3,999 km in length are Medium-haul International. They fall under Frequency Cap III.
+</li>
+<li>
+Routes 4,000 km or more in length are Long-haul International. They fall under Frequency Cap III.
+</li>
+</ul>
+<h4>Intercontinental Routes</h4>
+<p>Routes that start and end in airports on different continents are Intercontinental routes. For example, New York to Hong Kong would be an Intercontinental route (North America to Asia).</p>
+<ul>
+<li>
+Routes less than 2,000 km in length are Short-haul Intercontinental. They fall under Frequency Cap II.
+</li>
+<li>
+Routes 2,000 km to 4,999 km in length are Medium-haul Intercontinental. They fall under Frequency Cap III.
+</li>
+<li>
+Routes 5,000 km to 11,999 km in length are Long-haul Intercontinental. They fall under Frequency Cap III.
+</li>
+<li>
+Routes over 12,0000 km in length are Ultra long-haul Intercontinental. They fall under Frequency Cap III.
+</li>
+</ul>
+<p>Airports near the continent borders such as ELE-APO (Panama-Colombia) can be classified as Short-haul Intercontinental, as they are from North America to South America. However, domestic routes always take priority over Intercontinental. For example, SVO-VVO (Moscow-Vladivostok, which are both in Russia, but Vladivostok is in Asia and Moscow is in Europe) is a Long-haul domestic instead of a Long-haul Intercontinental.</p>
+<h3>Frequency Cap</h3>
+<p>Each time you upgrade a</p>
+<p>base</p>
+<p>, you increase the amount of flights per week you can negotiate for. Exceeding the limit will make the negotiations progressively harder (e.g. a Cap I route from a base level 1 can have 6 frequency before becoming harder to negotiate). You can see the exact data in the table below.</p>
+<h3>Flight Delays and Cancellations</h3>
+<p>Every flight that your planes take, there are chances of a delay or cancellations happening. For a minor delay, the cost 5% of the ticket price per passenger</p>
+<p>[</p>
+<p>1</p>
+<p>]</p>
+<p>, a major delay is 30% of the ticket price, and a cancellation is 50% (half!) of the ticket price. These costs add up with pricey tickets, large amounts of passengers per flight, or both. There are "thresholds" or the base chance for a delay/cancelation to occur.</p>
+<p>[</p>
+<p>2</p>
+<p>]</p>
+<p>Graph showing the probability of problems in flights. the higher, the worse.</p>
+<p>To find the true chance of any of these happening, take the base chance, then multiply it by the lost airplane condition (e.g. 80% in normal conditions would an 8% chance of a minor delay). The graph besides shows the relation between the condition of an aircraft and the chance that there will be a delay/cancellation.</p>
+<h2>Guides</h2>
+<ul>
+<li>
+Making a route
+</li>
+<li>
+Troubleshooting routes
+</li>
+</ul>
+<p>Original content from</p>
+<p>Airline Club Wiki</p>
+<p>. Licensed under CC-BY-SA.</p>
+    </main>
+
+    <footer class="footer">
+        <p>Original content from Airline Club Wiki. Licensed under CC-BY-SA.</p>
+        <p style="margin-top: 10px;">For more information about the Airline-Club game, visit <a href="https://www.airline-club.com/" target="_blank" rel="noopener noreferrer">www.airline-club.com</a></p>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

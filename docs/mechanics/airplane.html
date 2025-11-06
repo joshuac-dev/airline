@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airplane - Airline Club Wiki</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="/index.html" class="navbar-brand">Airline Club Wiki</a>
+            <ul class="navbar-nav">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#aircraft">Aircraft</a></li>
+                <li><a href="#mechanics">Mechanics</a></li>
+                <li><a href="#world">World</a></li>
+                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="breadcrumbs">
+        <a href="/index.html">Home</a> <span>&gt;</span> <a href="/index.html#mechanics">Mechanics</a> <span>&gt;</span> <span>Airplane</span>
+    </div>
+
+    <main>
+        <h1>Airplane</h1>
+        
+<p>Airplanes are the method of transport the game is focused on. There are over 100 different models (135 to be exact) available in the game.</p>
+<h2>Airplane Menu</h2>
+<p>The airplane menu can be accessed by clicking the airplane icon from the left-hand list.</p>
+<h3>Features</h3>
+<p>Each airplane has important information listed in the airplane tab that should be known</p>
+<p>[</p>
+<p>1</p>
+<p>]</p>
+<p>:</p>
+<h4>Name</h4>
+<p>Distinguishes different airplane models from each other.</p>
+<h4>Family</h4>
+<p>See below.</p>
+<h4>Price</h4>
+<p>Current cost to buy the airplane. Planes that have less models in circulation have a discount starting from 50%</p>
+<p>[</p>
+<p>2</p>
+<p>]</p>
+<p>.</p>
+<h4>Capacity</h4>
+<p>How many seats an airplane would have, if there were only economy seats.</p>
+<h4>Max Range</h4>
+<p>The maximum range the aircraft fly on a route.</p>
+<h4>Fuel Burn</h4>
+<p>Arbitrary number used in fuel calculations, fuel usage.</p>
+<h4>Lifespan</h4>
+<p>Time (in</p>
+<p>years</p>
+<p>) it takes for an aircraft to be worn down to 0%, assuming max usage.</p>
+<h4>Speed</h4>
+<p>How fast an aircraft will fly (in km/h). Important for determining how many times the plane can fly on a given route, and for customer satisfaction. It also determines aircraft minutes.</p>
+<h4>Runway Requirement</h4>
+<p>The minimum distance the aircraft needs runway length at both the departure and arrival airport in a flight route in order for the plane to be operable. In V1, this used to be called airport scale, which was a rigid categorization system.</p>
+<h4>Manufacturer</h4>
+<p>The company (and country the company is from) that produces the aircraft. If your starting country is not on friendly terms with the manufacturer's country of origin, that model can not be purchased.</p>
+<h4>Category</h4>
+<p>An airplane can either be listed as light, regional, medium or large</p>
+<p>[</p>
+<p>3</p>
+<p>]</p>
+<p>. They are classified according to capacity (see above). Light aircraft have 7-60 passengers, regional have 72-150 passengers, medium have 156-250 passengers, and large have 266-853 passengers.</p>
+<h4>Turnaround Time</h4>
+<p>Time it takes to service the airplane on the ground (e.g. empty PAX, refuel, clean etc.). Higher turnaround times may limit route frequency.</p>
+<h2>Airplane Families</h2>
+<p>Every level of your airline lets you own another airplane family. You can only own a certain number of families, but you can buy an unlimited amount of airplanes in that family. Using different families does increase service costs as ground crew must train in the different family aircraft. Here is a list of all the available families alphabetically:</p>
+<ul>
+<li>
+ATR-Regional
+</li>
+<li>
+Airbus A300/A310
+</li>
+<li>
+Airbus A320
+</li>
+<li>
+Airbus A330
+</li>
+<li>
+Airbus A340
+</li>
+<li>
+Airbus A350
+</li>
+<li>
+Airbus A380
+</li>
+<li>
+Antonov-A
+</li>
+<li>
+BAe 146
+</li>
+<li>
+Beechcraft King Air
+</li>
+<li>
+Boeing 717
+</li>
+<li>
+Boeing 727
+</li>
+<li>
+Boeing 737 Classic
+</li>
+<li>
+Boeing 737 MAX
+</li>
+<li>
+Boeing 737 NG (Next Generation)
+</li>
+<li>
+Boeing 747
+</li>
+<li>
+Boeing 757
+</li>
+<li>
+Boeing 767
+</li>
+<li>
+Boeing 777
+</li>
+<li>
+Boeing 787
+</li>
+<li>
+Bombardier CRJ
+</li>
+<li>
+Bombardier CS (a.k.a Airbus A220)
+</li>
+<li>
+Bombardier DHC-8
+</li>
+<li>
+Bombardier Global
+</li>
+<li>
+Britten-Norman
+</li>
+<li>
+CASA CN-235
+</li>
+<li>
+Cessna
+</li>
+<li>
+Comac ARJ
+</li>
+<li>
+Comac C
+</li>
+<li>
+Concorde
+</li>
+<li>
+Dassault Falcon
+</li>
+<li>
+Dornier 328
+</li>
+<li>
+Embraer E-Jet E2
+</li>
+<li>
+Embraer ERJ
+</li>
+<li>
+Fokker
+</li>
+<li>
+Gulfstream
+</li>
+<li>
+Ilyushin Il-96
+</li>
+<li>
+Let L-410
+</li>
+<li>
+Lockheed L
+</li>
+<li>
+McDonnell Douglas MD
+</li>
+<li>
+Mitsubishi SpaceJet
+</li>
+<li>
+Pilatus
+</li>
+<li>
+Saab Regional
+</li>
+<li>
+Short
+</li>
+<li>
+Sukhoi Superjet
+</li>
+<li>
+Tupolev Tu
+</li>
+</ul>
+<h2>Restrictions</h2>
+<p>If your home country is in a bad relationship with the manufacturer's home country (relationship is less than 0), you can't buy planes from them.  Here is a list who which countries will not sell to (alphabetically).</p>
+<h3>Russian Federation</h3>
+<p>Includes manufacturers: Ilyushin, Let Kunovice, JSC Sukhoi, Tupolev</p>
+<ul>
+<li>
+United States
+</li>
+</ul>
+<h3>United Kingdom</h3>
+<p>Includes manufacturers: British Aerospace (BAe), Britten-Norman, and Short Brothers</p>
+<ul>
+<li>
+North Korea
+</li>
+</ul>
+<h3>United States</h3>
+<p>Includes manufacturers: Beechcraft, Boeing, Cessna, Gulfstream, Lockheed, and McDonnell Douglas</p>
+<ul>
+<li>
+Cuba
+</li>
+<li>
+Iraq
+</li>
+<li>
+North Korea
+</li>
+<li>
+Russian Federation
+</li>
+</ul>
+<h2>Airplane Condition</h2>
+<p>Airplanes will last for a certain time before they need to be replaced, represented in a percent. 100% is a brand new plane, 0% is a really old plane. Aircraft loses it's condition, no matter if it's just sitting around doing nothing or flying.</p>
+<p>To find the wear per week use the following formula:</p>
+<p>100</p>
+<p>/</p>
+<p>(</p>
+<p>l</p>
+<p>i</p>
+<p>f</p>
+<p>e</p>
+<p>s</p>
+<p>p</p>
+<p>a</p>
+<p>n</p>
+<p>∗</p>
+<p>52</p>
+<p>)</p>
+<p>=</p>
+<p>x</p>
+<p>{\displaystyle 100/(lifespan*52)=x}</p>
+<p>x</p>
+<p>/</p>
+<p>3</p>
+<p>+</p>
+<p>x</p>
+<p>∗</p>
+<p>(</p>
+<p>2</p>
+<p>/</p>
+<p>3</p>
+<p>)</p>
+<p>∗</p>
+<p>u</p>
+<p>t</p>
+<p>i</p>
+<p>l</p>
+<p>i</p>
+<p>z</p>
+<p>a</p>
+<p>t</p>
+<p>i</p>
+<p>o</p>
+<p>n</p>
+<p>{\displaystyle x/3+x*(2/3)*utilization}</p>
+<p>If an airplane gets old enough, you might need to replace it (see below).</p>
+<p>Planes depreciate in value. To find it, take the plane's value (no discounts), multiply it by the wear rate divided by 100. (or value* (wear rate/100))</p>
+<h2>Other things you can do</h2>
+<h3>Favorited</h3>
+<p>If you own at least 5% of the total aircraft of a specific model in circulation (not counting the planes that were replaced/sold, you can set it as a favorite. In doing so, you do get 25% off the delivery time, and some discount off the price. The discounts depend on the airplane's category (see here for exact</p>
+<p>details</p>
+<p>). Click the heart icon next to the aircraft model in the airplane detail section. You can only change it every 52 weeks.</p>
+<p>Handy graph showing how often an airplane will have a delay/cancelation based on condition.</p>
+<h3>Repairing</h3>
+<p>When a plane's condition gets lower, there are more chances for</p>
+<p>delays and cancellations</p>
+<p>to occur. You can repair (called replace in the game) planes by going to the Airplane tab, clicking on the Base button of the aircraft model you want to repair, click on the plane you want to replace, then press the replace button (if you have the funds). The cost to renew is the the current cost of the plane minus its selling value.</p>
+<h4>Auto-renew</h4>
+<p>Going into the</p>
+<p>office</p>
+<p>will let you set a condition for your planes to be replaced at. Once a plane's condition goes under the percent you chose, the game will automatically replace it (assuming you have the funds).</p>
+<h3>Selling</h3>
+<p>To sell a plane, follow the same steps to replace a plane, but press the sell button in the last step. To calculate the selling value, use the following formula: current cost to buy a aircraft*(airplane condition)*.8*(any discounts, i.e. 25% off would be *.75). You will get the selling value back immediately, and your aircraft will be placed on the Used Aircraft market, and other airlines can buy them.</p>
+<h2>See Also</h2>
+<ul>
+<li>
+How to choose an airplane
+</li>
+<li>
+Aircraft Minutes
+</li>
+</ul>
+<p>Original content from</p>
+<p>Airline Club Wiki</p>
+<p>. Licensed under CC-BY-SA.</p>
+    </main>
+
+    <footer class="footer">
+        <p>Original content from Airline Club Wiki. Licensed under CC-BY-SA.</p>
+        <p style="margin-top: 10px;">For more information about the Airline-Club game, visit <a href="https://www.airline-club.com/" target="_blank" rel="noopener noreferrer">www.airline-club.com</a></p>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

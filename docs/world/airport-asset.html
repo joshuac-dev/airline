@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Asset - Airline Club Wiki</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="/index.html" class="navbar-brand">Airline Club Wiki</a>
+            <ul class="navbar-nav">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#aircraft">Aircraft</a></li>
+                <li><a href="#mechanics">Mechanics</a></li>
+                <li><a href="#world">World</a></li>
+                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="breadcrumbs">
+        <a href="/index.html">Home</a> <span>&gt;</span> <a href="/index.html#world">World</a> <span>&gt;</span> <span>Airport Asset</span>
+    </div>
+
+    <main>
+        <h1>Airport Asset</h1>
+        
+<p>The first leak of airport assets.</p>
+<p>Airport assets are a new feature which can help airlines further develop</p>
+<p>airports</p>
+<p>. Certain assets can adjust demand to/from an</p>
+<p>airport</p>
+<p>, create new population, or increase the income level. Depending on the</p>
+<p>airport's</p>
+<p>location, there will be different options available.</p>
+<h2>List of assets</h2>
+<p>Base level refers to the minimum base level required to build the asset.</p>
+<p>ROI stands for Return on Investment.</p>
+<p>A year in Airline Club is 52 weeks long.</p>
+<p>The first table shows publicly revealed aspects of bases, the second table shows hidden aspects only available by looking at the game code.</p>
+<p>5 business charm</p>
+<p>50k population</p>
+<p>The assets encourage passenger demand by lowering the perceived price of a flight of a traveler visiting the asset.</p>
+<p>"Probability" refers to the chance that a random passenger will visit this asset and be influenced by it. Even if some assets have big effects on visitors, not many people may visit the asset, reducing its influence. The probability field does not apply to hotels, their number of tourists is calculated differently.</p>
+<p>Swift-type passengers will not visit assets and therefore will not see perceived price discounts (this does not apply to assets which facilitate transits, such as the Airport Hotel).</p>
+<p>The discounts given for assets only apply for max-level assets. Assets start off with half the perceived price discount effect, then slowly, linearly increase after each upgrade.</p>
+<h3>Airport Hotel</h3>
+<p>The Airport Hotel is the only asset that does not have a bonus shown in-game. However, it is helpful in decreasing the transit cost of passengers. The decrease in transit cost is dependent on the route with the lowest frequency. Discounts increase linearly as Airport Hotel is upgraded. Airport Hotel bonuses</p>
+<p>do not stack;</p>
+<p>the game uses the level of the highest-level Airport Hotel in the airport. Airport Hotel bonuses apply to</p>
+<p>all flights</p>
+<p>to an</p>
+<p>airport</p>
+<p>. The table below shows the discounts granted for transit cost for a level 1 and a level 10 Airport Hotel.</p>
+<p>For comparison, the minimum transit cost of a route is $25 for transiting between the same airline or airlines in the same alliance, and $100 for transiting between different airlines. An additional cost of</p>
+<p>420 / frequency</p>
+<p>is imposed with the frequency of the less-frequent route being used. For example, the transit cost between two flights on different airlines where a flight has frequency 7 is</p>
+<p>100 + 420 / 7 =</p>
+<p>160 dollars, but with a level Airport Hotel, you get a 30% discount, bringing the cost down to $112, or a $48 price decrease.</p>
+<h2>History</h2>
+<p>With the announcement of V2.1, airport assets were among the first features leaked on October 23, 2021. Later that year in December, the original concept was laid out by AC:</p>
+<p>Have been thinking how to make it more interesting instead of something static, this is what we are considering so far (just a draft):</p>
+<p>1. Assets blueprints will be auto generated and assign to various airports (with certain logic's that determine what each airport gets)</p>
+<p>2. Each</p>
+<p>airport</p>
+<p>can have up to 8 blueprints; once a blueprint is claimed and built, it's owned by that airline, unless it's removed/deleted by that airline.</p>
+<p>3. Only airlines with base can claim and build an asset. Only one asset per airline, per</p>
+<p>airport</p>
+<p>. There might be base level requirement to claim certain blueprint</p>
+<p>4. Assets would give a certain bonus to the</p>
+<p>airport</p>
+<p>. Each asset would evolve slowly (stronger effect each level). Airlines can spend money to level it up (very slowly, with cool down, maybe like every 5 years game time). Maybe max level is 10. And how much bonus for each upgrade depending on how the assets perform during the last 5 years. (we will give a hints on the performance). With that base value + some RNG, the upgrade will take maybe a year (in game time), and finally the new bonus will be revealed</p>
+<p>5. Assets will have performance (and some profits perhaps, nothing too overwhelming tho) and some interesting stats. They might tie to various aspects of the</p>
+<p>airport</p>
+<p>. For example, an airport hotel might calculate based on transit pax amount. An amusement park on the amount of arrival pax etc etc.</p>
+<p>Original content from</p>
+<p>Airline Club Wiki</p>
+<p>. Licensed under CC-BY-SA.</p>
+    </main>
+
+    <footer class="footer">
+        <p>Original content from Airline Club Wiki. Licensed under CC-BY-SA.</p>
+        <p style="margin-top: 10px;">For more information about the Airline-Club game, visit <a href="https://www.airline-club.com/" target="_blank" rel="noopener noreferrer">www.airline-club.com</a></p>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
