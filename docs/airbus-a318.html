@@ -106,12 +106,79 @@
             font-size: 0.9em;
             text-align: center;
         }
+        .image-gallery {
+            margin: 20px 0;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .image-tabs {
+            display: flex;
+            background-color: #e9ecef;
+            border-bottom: 2px solid #dee2e6;
+        }
+        .image-tab {
+            flex: 1;
+            padding: 12px 20px;
+            background-color: #e9ecef;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            color: #495057;
+            transition: all 0.3s ease;
+        }
+        .image-tab:hover {
+            background-color: #dee2e6;
+        }
+        .image-tab.active {
+            background-color: #fff;
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            margin-bottom: -2px;
+        }
+        .image-content {
+            display: none;
+            padding: 20px;
+            text-align: center;
+        }
+        .image-content.active {
+            display: block;
+        }
+        .image-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .image-caption {
+            margin-top: 10px;
+            color: #666;
+            font-size: 0.9em;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
     <a href="index.html" class="back-link">← Back to Manual Home</a>
     
     <h1>Airbus A318</h1>
+    
+    <div class="image-gallery">
+        <div class="image-tabs">
+            <button class="image-tab active" onclick="showImage('british-airways')">British Airways</button>
+            <button class="image-tab" onclick="showImage('in-game')">In-game</button>
+        </div>
+        <div class="image-content active" id="british-airways">
+            <img src="images/BA_A318.jpg" alt="British Airways Airbus A318">
+            <div class="image-caption">British Airways</div>
+        </div>
+        <div class="image-content" id="in-game">
+            <img src="images/Airbus-a318.png" alt="Airbus A318 in-game">
+            <div class="image-caption">In-game</div>
+        </div>
+    </div>
     
     <div class="info-box">
         <p><strong>Airplane Family:</strong> Airbus A320</p>
@@ -184,5 +251,23 @@
     <div class="footer">
         <p>For more information about the Airline-Club game, visit <a href="https://www.airline-club.com/" target="_blank">www.airline-club.com</a></p>
     </div>
+    
+    <script>
+        function showImage(imageId) {
+            // Hide all image contents
+            const contents = document.querySelectorAll('.image-content');
+            contents.forEach(content => content.classList.remove('active'));
+            
+            // Deactivate all tabs
+            const tabs = document.querySelectorAll('.image-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Show selected image content
+            document.getElementById(imageId).classList.add('active');
+            
+            // Activate corresponding tab
+            event.target.classList.add('active');
+        }
+    </script>
 </body>
 </html>
