@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to contribute to Airline Club</title>
+<style>
+body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto; }
+img { max-width: 100%; height: auto; }
+table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+th { background-color: #f2f2f2; }
+.wikitable { border: 1px solid #ccc; }
+</style>
+</head>
+<body>
+<h1>How to contribute to Airline Club</h1>
+<hr>
+<div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><table style="text-align:center; background:#FF5733; color:#000; border:2px solid #AAA; margin-bottom:10px;" cellpadding="8">
+
+<tbody><tr>
+<td><b>This is not official!</b><br />This is not written by the developer or the admins, nor is it currently endorsed by them.
+</td>
+<td>
+</td></tr></tbody></table>
+<p>There are many ways to help improve Airline Club. Some of them are listed. We hope you consider taking a look at them!
+</p>
+
+<h2><span class="mw-headline" id="Coding">Coding</span></h2>
+<p>Since Airline Club is open source, you can find its code on <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.github.com/patsonluk/airline">Github</a>. It is possible to contribute to the code on there. If you have any ideas for new features and you are very good at programming (in Scala, Javascript or HTML), you may want to code it in yourself. If you want to help but don't have any suggestions, them you can check the open issues and solve them yourself.
+</p><p>You can also make a <a href="/wiki/Category:Mods" title="Category:Mods">mod</a> that changes the layout of AC. These do not have to be direct contributions to the source code, and can be implemented via a user's inspect menu or a third-party script runner such as <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.tampermonkey.net/">Tampermonkey</a>. 
+</p>
+<h2><span class="mw-headline" id="Adding_airplanes">Adding airplanes</span></h2>
+<p>Note: AC is currently <b>not adding</b> new planes before v3. You can still suggest them, but they will not be implemented before then. He is also not accepting planes which are too similar to other planes or otherwise not be used by players (or variants for existing planes such as the A220).
+</p><p>Adding an airplane is simple. You will need to define some variables at <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.github.com/patsonluk/airline/blob/master/airline-data/src/main/scala/com/patson/model/airplane/Model.scala">Model.scala on Github</a>, and add a picture.  The variables are organized like this. Bolded values need to be changed by you. 
+</p><p><code>Model(“<b>Name</b>”, “<b>Family</b>”, capacity = <b>x</b>, fuelBurn = (<b>capacity</b> * <b>fuel burn per pax</b>).toInt, speed = <b>x</b>, range = <b>x</b>, price = <b>x</b>, lifespan = <b>x</b> * 52, constructionTime = <b>x</b>, Manufacturer(“<b>name</b>”, countryCode = “<b>Country</b>”), runwayRequirement = <b>x</b>, imageUrl = "<b>https://www.norebbo.com/something</b>”)</code>
+</p><p>Note that the imageUrl is not the actual raw image url, it is the website where the image is posted on. Airline Club uses images from <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.norebbo.com/">Norebbo.</a> It will be best if images are either from Norebbo or are very similar in style to Norebbo's images. Make sure values do not have any separators (i.e. turn 100,000,000 into 100000000) when inserting new values 
+</p><p>An example airplane may look like this:
+</p><p><code>Model("Boeing 787-8 Dreamliner", "Boeing 787", capacity = 250, fuelBurn = (250 * 4.5).toInt, speed = 907, range = 13621, price = 125000000, lifespan = 35 * 52, constructionTime = 36, Manufacturer("Boeing", countryCode = "US"), runwayRequirement = 2600, imageUrl = "https://www.norebbo.com/2013/02/boeing-787-8-blank-illustration-templates/")</code>
+</p>
+<h3><span id="How_to_edit_Norebbo.27s_images_for_the_game"></span><span class="mw-headline" id="How_to_edit_Norebbo's_images_for_the_game">How to edit Norebbo's images for the game</span></h3>
+<p>AC has an agreement with Norebbo and is allowed to use his images in the game, as long as the resolution is scaled down to 500px x 200px. Listed below is how AC does it. He uses GIMP (image processing software) for this but you can use other photo editing software. 
+</p>
+<ol><li>First, size the image to meet the width&#160;: 500px</li>
+<li>Then cut the airplane with the gears down</li>
+<li>Then use selection tool to select the airplane, and cut out the background to make it transparent</li>
+<li>Adjust the canvas size to 500px X 200px</li>
+<li>Move the airplane to center it in the image</li>
+<li>Export it as PNG (which preserves the transparent background)</li></ol>
+<p>After you find and edit the image, it will need to be uploaded onto <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.github.com/patsonluk/airline/tree/master/airline-web/public/images/airplanes">the airplane pic folder</a>, with the correct file name (e.g. Airbus A350-900 ULR to <code>airbus-a350-900-url.png)</code>
+</p><p>After this, you can make a pull request on Github.
+</p>
+<h2><span class="mw-headline" id="Adding_Data"><s>Adding Data</s></span></h2>
+<p>From Fly or die: I originally wrote this section, but no longer endorse this part of the guide, due to it being outdated and full of speculation.
+</p><p><s>Airline Club is missing lots of data about airports and cities, especially those outside of North America and Europe. If you add or make a change to an airport/city, you would have to wait until V3 is released to see the changes.</s>
+</p>
+<h3><span id="Adding_airports.2Frunways"></span><span class="mw-headline" id="Adding_airports/runways"><s>Adding airports/runways</s></span></h3>
+<p><s>Airline Club uses data from <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://ourairports.com/">OurAirports</a> for its airports and runways. To edit the database there, first make an account on the website. If you want to add an airport, first, check if it has any airlines servicing it, Airline Club only adds these types of airports. If the airport doesn't have any airlines servicing it (such as General Aviation fields), don't add it. If the airport has airlines servicing it, search for the airport, go to edit, and tick the Has Airline Service checkbox.</s>
+</p><p><s>Adding a runway is a bit more complicated. To edit runways, go to the airport you want to edit, then select Pilots on the top bar. The dropdown list will list runways. Click it. To find information about the runways of an airport, first check Wikipedia. If Wikipedia doesn't have runway data, go to Google Maps. To measure runway length, use Google's measuring tool, found when right clicking a point. Connect the two opposite points and note the distance. Runway identifiers are found at the ends of runways. Make sure that you read the number correctly, not upside down. Runway identifiers go from 01 - 36, and the numbers on either end should differ by 18 (e.g. 01 and 19, 06 and 24, 18 and 36 etc.).</s>
+</p>
+<figure class="thumb  show-info-icon" typeof="mw:File/Thumb" style="width: 180px"> 	<a href="https://static.wikia.nocookie.net/airline-club/images/f/fd/Measuring_Runways.png/revision/latest?cb=20211020234912" class="mw-file-description image"><img alt="Measuring Runways" src="https://static.wikia.nocookie.net/airline-club/images/f/fd/Measuring_Runways.png/revision/latest/scale-to-width-down/180?cb=20211020234912" decoding="async" loading="lazy" width="180" height="169" class="thumbimage" data-image-name="Measuring Runways.png" data-image-key="Measuring_Runways.png" data-relevant="1" /></a> 	 	<figcaption class="thumbcaption"> 		 			<a href="/wiki/File:Measuring_Runways.png" class="info-icon"><svg><use xlink:href="#wds-icons-info-small"></use></svg></a> 		 		 		 			<p class="caption"><s>How to measure runways</s></p> 		 	</figcaption> </figure><p><s>Please be sure to double-check your measurements, and add them in feet. If your result is in metric units, you will have to convert them.</s>
+</p><h3><span class="mw-headline" id="Adding_Cities"><s>Adding Cities</s></span></h3>
+<p><s>Airline Club uses <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://www.geonames.org">Geonames</a> for city data. To edit a city's population, first create an account, and then search for the city that you want to add. To find population info, go to Wikipedia and use the city's urban population, not total population (usually found on the left infobox). In Geonames, click the edit button (pencil), and then change the population. If you run into an error, try it again. If your error is something related to user level, it means that your account is too new. You can message Fly or Die on the Airline Club discord and let him fix it for you.</s>
+</p></div>
+<hr>
+<footer><p>Original content from Airline Club Wiki. Licensed under CC-BY-SA.</p></footer>
+</body>
+</html>
