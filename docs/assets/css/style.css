@@ -666,6 +666,7 @@ pre code {
 
 /* Welcome Section */
 .welcome {
+    background-color: var(--accent-primary);
     background-image: url('../images/main-header.gif');
     background-size: cover;
     background-position: center;
