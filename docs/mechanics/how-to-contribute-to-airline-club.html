@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to contribute to Airline Club - Airline Club Wiki</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="/index.html" class="navbar-brand">Airline Club Wiki</a>
+            <ul class="navbar-nav">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#aircraft">Aircraft</a></li>
+                <li><a href="#mechanics">Mechanics</a></li>
+                <li><a href="#world">World</a></li>
+                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="breadcrumbs">
+        <a href="/index.html">Home</a> <span>&gt;</span> <a href="/index.html#mechanics">Mechanics</a> <span>&gt;</span> <span>How to contribute to Airline Club</span>
+    </div>
+
+    <main>
+        <h1>How to contribute to Airline Club</h1>
+        
+<p>There are many ways to help improve Airline Club. Some of them are listed. We hope you consider taking a look at them!</p>
+<h2>Coding</h2>
+<p>Since Airline Club is open source, you can find its code on</p>
+<p>Github</p>
+<p>. It is possible to contribute to the code on there. If you have any ideas for new features and you are very good at programming (in Scala, Javascript or HTML), you may want to code it in yourself. If you want to help but don't have any suggestions, them you can check the open issues and solve them yourself.</p>
+<p>You can also make a</p>
+<p>mod</p>
+<p>that changes the layout of AC. These do not have to be direct contributions to the source code, and can be implemented via a user's inspect menu or a third-party script runner such as</p>
+<p>Tampermonkey</p>
+<p>.</p>
+<h2>Adding airplanes</h2>
+<p>Note: AC is currently</p>
+<p>not adding</p>
+<p>new planes before v3. You can still suggest them, but they will not be implemented before then. He is also not accepting planes which are too similar to other planes or otherwise not be used by players (or variants for existing planes such as the A220).</p>
+<p>Adding an airplane is simple. You will need to define some variables at</p>
+<p>Model.scala on Github</p>
+<p>, and add a picture.  The variables are organized like this. Bolded values need to be changed by you.</p>
+<p>Model(“</p>
+<p>Name</p>
+<p>”, “</p>
+<p>Family</p>
+<p>”, capacity =</p>
+<p>x</p>
+<p>, fuelBurn = (</p>
+<p>capacity</p>
+<p>*</p>
+<p>fuel burn per pax</p>
+<p>).toInt, speed =</p>
+<p>x</p>
+<p>, range =</p>
+<p>x</p>
+<p>, price =</p>
+<p>x</p>
+<p>, lifespan =</p>
+<p>x</p>
+<p>* 52, constructionTime =</p>
+<p>x</p>
+<p>, Manufacturer(“</p>
+<p>name</p>
+<p>”, countryCode = “</p>
+<p>Country</p>
+<p>”), runwayRequirement =</p>
+<p>x</p>
+<p>, imageUrl = "</p>
+<p>https://www.norebbo.com/something</p>
+<p>”)</p>
+<p>Note that the imageUrl is not the actual raw image url, it is the website where the image is posted on. Airline Club uses images from</p>
+<p>Norebbo.</p>
+<p>It will be best if images are either from Norebbo or are very similar in style to Norebbo's images. Make sure values do not have any separators (i.e. turn 100,000,000 into 100000000) when inserting new values</p>
+<p>An example airplane may look like this:</p>
+<p>Model("Boeing 787-8 Dreamliner", "Boeing 787", capacity = 250, fuelBurn = (250 * 4.5).toInt, speed = 907, range = 13621, price = 125000000, lifespan = 35 * 52, constructionTime = 36, Manufacturer("Boeing", countryCode = "US"), runwayRequirement = 2600, imageUrl = "https://www.norebbo.com/2013/02/boeing-787-8-blank-illustration-templates/")</p>
+<h3>How to edit Norebbo's images for the game</h3>
+<p>AC has an agreement with Norebbo and is allowed to use his images in the game, as long as the resolution is scaled down to 500px x 200px. Listed below is how AC does it. He uses GIMP (image processing software) for this but you can use other photo editing software.</p>
+<p>After you find and edit the image, it will need to be uploaded onto</p>
+<p>the airplane pic folder</p>
+<p>, with the correct file name (e.g. Airbus A350-900 ULR to</p>
+<p>airbus-a350-900-url.png)</p>
+<p>After this, you can make a pull request on Github.</p>
+<h2>Adding Data</h2>
+<p>From Fly or die: I originally wrote this section, but no longer endorse this part of the guide, due to it being outdated and full of speculation.</p>
+<p>Airline Club is missing lots of data about airports and cities, especially those outside of North America and Europe. If you add or make a change to an airport/city, you would have to wait until V3 is released to see the changes.</p>
+<h3>Adding airports/runways</h3>
+<p>Airline Club uses data from</p>
+<p>OurAirports</p>
+<p>for its airports and runways. To edit the database there, first make an account on the website. If you want to add an airport, first, check if it has any airlines servicing it, Airline Club only adds these types of airports. If the airport doesn't have any airlines servicing it (such as General Aviation fields), don't add it. If the airport has airlines servicing it, search for the airport, go to edit, and tick the Has Airline Service checkbox.</p>
+<p>Adding a runway is a bit more complicated. To edit runways, go to the airport you want to edit, then select Pilots on the top bar. The dropdown list will list runways. Click it. To find information about the runways of an airport, first check Wikipedia. If Wikipedia doesn't have runway data, go to Google Maps. To measure runway length, use Google's measuring tool, found when right clicking a point. Connect the two opposite points and note the distance. Runway identifiers are found at the ends of runways. Make sure that you read the number correctly, not upside down. Runway identifiers go from 01 - 36, and the numbers on either end should differ by 18 (e.g. 01 and 19, 06 and 24, 18 and 36 etc.).</p>
+<p>How to measure runways</p>
+<p>Please be sure to double-check your measurements, and add them in feet. If your result is in metric units, you will have to convert them.</p>
+<h3>Adding Cities</h3>
+<p>Airline Club uses</p>
+<p>Geonames</p>
+<p>for city data. To edit a city's population, first create an account, and then search for the city that you want to add. To find population info, go to Wikipedia and use the city's urban population, not total population (usually found on the left infobox). In Geonames, click the edit button (pencil), and then change the population. If you run into an error, try it again. If your error is something related to user level, it means that your account is too new. You can message Fly or Die on the Airline Club discord and let him fix it for you.</p>
+<p>Original content from</p>
+<p>Airline Club Wiki</p>
+<p>. Licensed under CC-BY-SA.</p>
+    </main>
+
+    <footer class="footer">
+        <p>Original content from Airline Club Wiki. Licensed under CC-BY-SA.</p>
+        <p style="margin-top: 10px;">For more information about the Airline-Club game, visit <a href="https://www.airline-club.com/" target="_blank" rel="noopener noreferrer">www.airline-club.com</a></p>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegates - Airline Club Wiki</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="/index.html" class="navbar-brand">Airline Club Wiki</a>
+            <ul class="navbar-nav">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#aircraft">Aircraft</a></li>
+                <li><a href="#mechanics">Mechanics</a></li>
+                <li><a href="#world">World</a></li>
+                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="breadcrumbs">
+        <a href="/index.html">Home</a> <span>&gt;</span> <a href="/index.html#mechanics">Mechanics</a> <span>&gt;</span> <span>Delegates</span>
+    </div>
+
+    <main>
+        <h1>Delegates</h1>
+        
+<p>Delegates are a mechanic in the game that is used for various tasks. Each player starts with a small number of Delegates. As the airline grows in</p>
+<p>reputation</p>
+<p>the number of delegates also increases.</p>
+<p>A Delegates Pool with some delegates available, busy, and on cooldown.</p>
+<h2>Delegate Number</h2>
+<p>Every airline starts with 5 delegates, and gains 3 for every</p>
+<p>rank/grade</p>
+<p>(including the first). The function for this is as follows</p>
+<p>[</p>
+<p>1</p>
+<p>]</p>
+<p>:</p>
+<p>In which, BASE_DELEGATE_COUNT is 5 and DELEGATE_PER_LEVEL is 3.</p>
+<h2>Negotiations</h2>
+<p>Negotiations happen when a player wants to open a new route or expand an existing route. Each delegate is capable of contributing to a successful negotiation by a certain amount. Adding delegates to the negotiation will increase the probability of success which can be seen near the bottom right of the negotiation panel. A successful negotiation will result in the route being created or updated, and each delegate that was used in that negotiation to be placed on a 12</p>
+<p>week</p>
+<p>cool down. If the negotiation is not successful, the delegates that were used will be placed on a 6 week cooldown.</p>
+<p>Furthermore, within 30 weeks of the failed negotiation, on successive attempts to negotiate the same route, you get a negotiation discount which is given when negotiation is over. You may go back and see previous negotiation discounts in the</p>
+<p>Log</p>
+<p>menu.</p>
+<p>After any negotiation (success or failure), there is a 6 week cool down before you can renegotiate. On a great success, delegates may have their cool down shortened, or even eliminated (so they can be used again, immediately!).</p>
+<h3>Difficulty</h3>
+<p>Various factors affect how hard it is to make a route. The higher the difficulty, the more delegates are required to make the route. You can only assign up to 10 delegates per negotiation, so you can only create routes under a 10.00 difficulty.</p>
+<h2>Campaigns</h2>
+<p>A campaign setup window.</p>
+<p>Campaigns are a way for the player to build</p>
+<p>loyalty</p>
+<p>and</p>
+<p>awareness</p>
+<p>in an area. The player may assign any number of available delegates to a campaign. Each delegate added will increase the loyalty and awareness gained each week, but also the cost of running the campaign. The campaigns radius, or area of affect, can also be increased to include more airports, which does not change the cost, but affects the amount of loyalty and awareness gained.</p>
+<h2>Country Relationships</h2>
+<p>Delegates are also used to improve the airline's relationship factor with a given country, which makes negotiations easier, and grants your airline titles for that particular country. In some cases, it allows an airline based in a country to buy an aircraft from a once hostile country. The benefits listed below are for all countries, but the requirements might be different between countries. Bigger countries have more national airlines and partnered airlines than small countries.</p>
+<h3>Approved Airline</h3>
+<h4>Requirements:</h4>
+<ul>
+<li>
+Airline reaches relationship 5 with (country)
+</li>
+</ul>
+<h4>Benefits:</h4>
+<ul>
+<li>
+None
+</li>
+</ul>
+<h3>Established Airline</h3>
+<h4>Requirements:</h4>
+<ul>
+<li>
+Airline reaches relationship 20 with (country)
+</li>
+<li>
+Flight route established with (country)
+</li>
+</ul>
+<h4>Benefits:</h4>
+<ul>
+<li>
+Allow building airport
+bases
+in only Gateway airports in (country)
+</li>
+</ul>
+<h3>Privileged Airline</h3>
+<h4>Requirements:</h4>
+<ul>
+<li>
+Airline reaches relationship 40 with (country)
+</li>
+<li>
+Flight route established with (country)
+</li>
+</ul>
+<h4>Benefits:</h4>
+<ul>
+<li>
+Allow building airport
+bases
+in any airport in (country)
+</li>
+</ul>
+<h3>Partnered Airline</h3>
+<h4>Requirements:</h4>
+<ul>
+<li>
+Airline market share - reach top 1/2/3 of all airlines in the (country), excluding the national airline
+</li>
+</ul>
+<h4>Benefits:</h4>
+<ul>
+<li>
+Loyalty +4 on all airports in (country)
+</li>
+<li>
+Relationship +15 with (country)
+</li>
+<li>
+Allow building airport
+bases
+in any airports in (country)
+</li>
+</ul>
+<h3>National Airline</h3>
+<h4>Requirements:</h4>
+<ul>
+<li>
+Airline market share - reach top 1/2 of all airlines headquartered in (country)
+</li>
+</ul>
+<h4>Benefits:</h4>
+<ul>
+<li>
+Loyalty +13 on all airports in (country)
+</li>
+<li>
+Relationship +30 with (country)
+</li>
+<li>
+Allow building airport bases in any airports in (country)
+</li>
+<li>
+Two points towards Olympic votes
+</li>
+</ul>
+<p>A Relationship Management with Japan panel</p>
+<p>Delegates can be assigned to countries to upgrade your airport base, allowing you to expand. Once you do assign delegates for this reason, you can't remove these delegates. The amount of delegates needed to upgrade is (current scale)/2 for an HQ, and [(current scale)/2]+1 for bases, both rounding down.</p>
+<p>When a delegate is being used in any long-term task (e.g. campaigning), you can hover over them in the delegate pool to see what specific task they are doing. This is useful when trying to view your delegates without switching menus.</p>
+<h2>Levels</h2>
+<p>Delegates doing a long term task (campaigns and building relationships) gain experience and get better at doing the task over time. Delegates start at level 0 increase in level after 1 cycle, after 4 cycles, after 12 cycles and after 52 cycles. In total, it takes about 3 hours for a level 0 delegate to become level 2, 6 hours for a level 2 delegate to become level 3, and 1 day and 2 hours for a level 3 delegate to become a level 4 delegate.</p>
+<p>The higher level a delegate is, the more proficient it will be at its task, and will contribute more bonuses (e.g. you will get more relationship points with a level 4 delegate vs a level 1). However, if you remove the delegate and press the confirm button, the progress will be lost and the level count will reset. They will become available to use immediately</p>
+<p>Original content from</p>
+<p>Airline Club Wiki</p>
+<p>. Licensed under CC-BY-SA.</p>
+    </main>
+
+    <footer class="footer">
+        <p>Original content from Airline Club Wiki. Licensed under CC-BY-SA.</p>
+        <p style="margin-top: 10px;">For more information about the Airline-Club game, visit <a href="https://www.airline-club.com/" target="_blank" rel="noopener noreferrer">www.airline-club.com</a></p>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
