@@ -1,171 +1,159 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airbus - Airline Club Wiki</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Airbus - Airline Club Wiki</title>
+<link href="assets/css/style.css" rel="stylesheet"/>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-content">
-            <a href="index.html" class="navbar-brand">Airline Club Wiki</a>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="toggleMobileMenu()">☰</button>
-            <ul class="navbar-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#aircraft">Aircraft</a></li>
-                <li><a href="#mechanics">Mechanics</a></li>
-                <li><a href="#world">World</a></li>
-                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="breadcrumbs">
-        <a href="index.html">Home</a> <span>&gt;</span> <a href="index.html#aircraft">Aircraft</a> <span>&gt;</span> <span>Airbus</span>
-    </div>
-
-    <main>
-        <h1>Airbus</h1>
-        
-        <div class="header-image" style="text-align: center; margin: 20px 0;">
-            <img src="assets/images/aircraft/airbus-passenger-aircraft-family-formation2_header.jpg" alt="Airbus passenger aircraft family in formation" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        </div>
-        
-        <p>Airbus is a European multinational aerospace corporation that designs, manufactures, and sells civil and military aerospace products worldwide. Airbus is one of the world's leading aircraft manufacturers, competing primarily with Boeing.</p>
-
-        <h2>Aircraft Families</h2>
-        
-        <h3>A300 & A310 Series</h3>
-        <div class="home-grid">
-            <a href="aircraft/airbus/airbus-a300-600.html" class="home-card">
-                <h4>Airbus A300-600</h4>
-                <p>Wide-body aircraft</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a310-200.html" class="home-card">
-                <h4>Airbus A310-200</h4>
-                <p>Wide-body aircraft</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a310-300.html" class="home-card">
-                <h4>Airbus A310-300</h4>
-                <p>Wide-body aircraft</p>
-            </a>
-        </div>
-
-        <h3>A320 Family</h3>
-        <div class="home-grid">
-            <a href="aircraft/airbus/airbus-a318.html" class="home-card">
-                <h4>Airbus A318</h4>
-                <p>Smallest A320 family variant - 132 seats</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a319.html" class="home-card">
-                <h4>Airbus A319</h4>
-                <p>Narrow-body aircraft</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a319neo.html" class="home-card">
-                <h4>Airbus A319neo</h4>
-                <p>New engine option variant</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a320.html" class="home-card">
-                <h4>Airbus A320</h4>
-                <p>Narrow-body aircraft</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a320neo.html" class="home-card">
-                <h4>Airbus A320neo</h4>
-                <p>New engine option variant</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a321.html" class="home-card">
-                <h4>Airbus A321</h4>
-                <p>Narrow-body aircraft</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a321neo.html" class="home-card">
-                <h4>Airbus A321neo</h4>
-                <p>New engine option variant</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a321neolr.html" class="home-card">
-                <h4>Airbus A321neo LR</h4>
-                <p>Long range variant</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a321neoxlr.html" class="home-card">
-                <h4>Airbus A321neo XLR</h4>
-                <p>Extra long range variant</p>
-            </a>
-        </div>
-
-        <h3>A330 Family</h3>
-        <div class="home-grid">
-            <a href="aircraft/airbus/airbus-a330-200.html" class="home-card">
-                <h4>Airbus A330-200</h4>
-                <p>Wide-body aircraft</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a330-300.html" class="home-card">
-                <h4>Airbus A330-300</h4>
-                <p>Wide-body aircraft</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a330-800neo.html" class="home-card">
-                <h4>Airbus A330-800neo</h4>
-                <p>New engine option variant</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a330-900neo.html" class="home-card">
-                <h4>Airbus A330-900neo</h4>
-                <p>New engine option variant</p>
-            </a>
-        </div>
-
-        <h3>A340 Family</h3>
-        <div class="home-grid">
-            <a href="aircraft/airbus/airbus-a340-200.html" class="home-card">
-                <h4>Airbus A340-200</h4>
-                <p>Wide-body aircraft</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a340-300.html" class="home-card">
-                <h4>Airbus A340-300</h4>
-                <p>Wide-body aircraft</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a340-500.html" class="home-card">
-                <h4>Airbus A340-500</h4>
-                <p>Wide-body aircraft</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a340-600.html" class="home-card">
-                <h4>Airbus A340-600</h4>
-                <p>Wide-body aircraft</p>
-            </a>
-        </div>
-
-        <h3>A350 Family</h3>
-        <div class="home-grid">
-            <a href="aircraft/airbus/airbus-a350-800.html" class="home-card">
-                <h4>Airbus A350-800</h4>
-                <p>Wide-body aircraft</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a350-900.html" class="home-card">
-                <h4>Airbus A350-900</h4>
-                <p>Wide-body aircraft</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a350-900ulr.html" class="home-card">
-                <h4>Airbus A350-900 ULR</h4>
-                <p>Ultra long range variant</p>
-            </a>
-            <a href="aircraft/airbus/airbus-a350-1000.html" class="home-card">
-                <h4>Airbus A350-1000</h4>
-                <p>Wide-body aircraft</p>
-            </a>
-        </div>
-
-        <h3>A380 Family</h3>
-        <div class="home-grid">
-            <a href="aircraft/airbus/airbus-a380-800.html" class="home-card">
-                <h4>Airbus A380-800</h4>
-                <p>Double-deck, wide-body aircraft</p>
-            </a>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <p>Original content from Airline Club Wiki. Licensed under CC-BY-SA.</p>
-        <p style="margin-top: 10px;">For more information about the Airline-Club game, visit <a href="https://www.airline-club.com/" target="_blank" rel="noopener noreferrer">www.airline-club.com</a></p>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
+<nav class="navbar">
+<div class="navbar-content">
+<a class="navbar-brand" href="index.html">Airline Club Wiki</a>
+<button aria-label="Toggle menu" class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+<ul class="navbar-nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="#aircraft">Aircraft</a></li>
+<li><a href="#mechanics">Mechanics</a></li>
+<li><a href="#world">World</a></li>
+<li><button aria-label="Toggle dark mode" class="theme-toggle" id="theme-toggle">🌙</button></li>
+</ul>
+</div>
+</nav>
+<div class="breadcrumbs">
+<a href="index.html">Home</a> <span>&gt;</span> <a href="index.html#aircraft">Aircraft</a> <span>&gt;</span> <span>Airbus</span>
+</div>
+<main>
+<h1>Airbus</h1>
+<div class="header-image" style="text-align: center; margin: 20px 0;">
+<img alt="Airbus passenger aircraft family in formation" src="assets/images/aircraft/airbus-passenger-aircraft-family-formation2_header.jpg" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+</div>
+<p>Airbus is a European multinational aerospace corporation that designs, manufactures, and sells civil and military aerospace products worldwide. Airbus is one of the world's leading aircraft manufacturers, competing primarily with Boeing.</p>
+<h2>Aircraft Families</h2>
+<h3>A300 &amp; A310 Series</h3>
+<div class="home-grid">
+<a class="home-card" href="aircraft/airbus/airbus-a300-600.html">
+<h4>Airbus A300-600</h4>
+<p>Wide-body aircraft</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a310-200.html">
+<h4>Airbus A310-200</h4>
+<p>Wide-body aircraft</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a310-300.html">
+<h4>Airbus A310-300</h4>
+<p>Wide-body aircraft</p>
+</a>
+</div>
+<h3>A320 Family</h3>
+<div class="home-grid">
+<a class="home-card" href="aircraft/airbus/airbus-a318.html">
+<h4>Airbus A318</h4>
+<p>Smallest A320 family variant - 132 seats</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a319.html">
+<h4>Airbus A319</h4>
+<p>Narrow-body aircraft</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a319neo.html">
+<h4>Airbus A319neo</h4>
+<p>New engine option variant</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a320.html">
+<h4>Airbus A320</h4>
+<p>Narrow-body aircraft</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a320neo.html">
+<h4>Airbus A320neo</h4>
+<p>New engine option variant</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a321.html">
+<h4>Airbus A321</h4>
+<p>Narrow-body aircraft</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a321neo.html">
+<h4>Airbus A321neo</h4>
+<p>New engine option variant</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a321neolr.html">
+<h4>Airbus A321neo LR</h4>
+<p>Long range variant</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a321neoxlr.html">
+<h4>Airbus A321neo XLR</h4>
+<p>Extra long range variant</p>
+</a>
+</div>
+<h3>A330 Family</h3>
+<div class="home-grid">
+<a class="home-card" href="aircraft/airbus/airbus-a330-200.html">
+<h4>Airbus A330-200</h4>
+<p>Wide-body aircraft</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a330-300.html">
+<h4>Airbus A330-300</h4>
+<p>Wide-body aircraft</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a330-800neo.html">
+<h4>Airbus A330-800neo</h4>
+<p>New engine option variant</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a330-900neo.html">
+<h4>Airbus A330-900neo</h4>
+<p>New engine option variant</p>
+</a>
+</div>
+<h3>A340 Family</h3>
+<div class="home-grid">
+<a class="home-card" href="aircraft/airbus/airbus-a340-200.html">
+<h4>Airbus A340-200</h4>
+<p>Wide-body aircraft</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a340-300.html">
+<h4>Airbus A340-300</h4>
+<p>Wide-body aircraft</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a340-500.html">
+<h4>Airbus A340-500</h4>
+<p>Wide-body aircraft</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a340-600.html">
+<h4>Airbus A340-600</h4>
+<p>Wide-body aircraft</p>
+</a>
+</div>
+<h3>A350 Family</h3>
+<div class="home-grid">
+<a class="home-card" href="aircraft/airbus/airbus-a350-800.html">
+<h4>Airbus A350-800</h4>
+<p>Wide-body aircraft</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a350-900.html">
+<h4>Airbus A350-900</h4>
+<p>Wide-body aircraft</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a350-900ulr.html">
+<h4>Airbus A350-900 ULR</h4>
+<p>Ultra long range variant</p>
+</a>
+<a class="home-card" href="aircraft/airbus/airbus-a350-1000.html">
+<h4>Airbus A350-1000</h4>
+<p>Wide-body aircraft</p>
+</a>
+</div>
+<h3>A380 Family</h3>
+<div class="home-grid">
+<a class="home-card" href="aircraft/airbus/airbus-a380-800.html">
+<h4>Airbus A380-800</h4>
+<p>Double-deck, wide-body aircraft</p>
+</a>
+</div>
+</main>
+<footer class="footer">
+<p>Original content from <a href="https://airline-club.fandom.com/wiki/Airline_Club_Wiki" rel="noopener noreferrer" target="_blank">Airline Club Wiki</a>. Licensed under CC-BY-SA.</p>
+<p style="margin-top: 10px;">For more information about the Airline-Club game, visit <a href="https://www.airline-club.com/" rel="noopener noreferrer" target="_blank">www.airline-club.com</a></p>
+</footer>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

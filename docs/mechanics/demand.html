@@ -1,33 +1,31 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demand - Airline Club Wiki</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Demand - Airline Club Wiki</title>
+<link href="../assets/css/style.css" rel="stylesheet"/>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-content">
-            <a href="../index.html" class="navbar-brand">Airline Club Wiki</a>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="toggleMobileMenu()">☰</button>
-            <ul class="navbar-nav">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="#aircraft">Aircraft</a></li>
-                <li><a href="#mechanics">Mechanics</a></li>
-                <li><a href="#world">World</a></li>
-                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="breadcrumbs">
-        <a href="../index.html">Home</a> <span>&gt;</span> <a href="../index.html#mechanics">Mechanics</a> <span>&gt;</span> <span>Demand</span>
-    </div>
-
-    <main>
-        <h1>Demand</h1>
-        
+<nav class="navbar">
+<div class="navbar-content">
+<a class="navbar-brand" href="../index.html">Airline Club Wiki</a>
+<button aria-label="Toggle menu" class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+<ul class="navbar-nav">
+<li><a href="../index.html">Home</a></li>
+<li><a href="#aircraft">Aircraft</a></li>
+<li><a href="#mechanics">Mechanics</a></li>
+<li><a href="#world">World</a></li>
+<li><button aria-label="Toggle dark mode" class="theme-toggle" id="theme-toggle">🌙</button></li>
+</ul>
+</div>
+</nav>
+<div class="breadcrumbs">
+<a href="../index.html">Home</a> <span>&gt;</span> <a href="../index.html#mechanics">Mechanics</a> <span>&gt;</span> <span>Demand</span>
+</div>
+<main>
+<h1>Demand</h1>
 <p>Demand is the amount of passengers that want to travel between any two given airports each in-game</p>
 <p>week</p>
 <p>. Demand randomly fluctuates within a certain range each week and includes travel in both directions. Demand is unique for any two airports and may be as low as zero to as high as ten thousands.</p>
@@ -44,11 +42,11 @@
 <p>type is listed in the following format: (economy class "Y")/(business class "J")/(first class "F"). The example shown has 6326 economy class, 108 business class, and 0 first class seats in demand. Next to it is the passenger type for the whole route (see below).</p>
 <h3>Indirect Demand</h3>
 <p>Example of a passenger map.</p>
-<p>Indirect demand (sometimes called transfer passengers) occurs when there is not enough flight volume to fulfill all direct demand, so passengers take indirect routes to reach their destination. To illustrate, if there is unfulfilled demand between Airports A and C but routes A<->B and B<->C exist, passengers between A and C will try to travel A<->B and B<->C. This can result in actual passenger volume surpassing the direct demand of a route many times over, especially between major hubs, as passengers use the route as part of their transit to their ultimate destination. Unlike direct demand, indirect demand is not listed and can only be estimated.</p>
+<p>Indirect demand (sometimes called transfer passengers) occurs when there is not enough flight volume to fulfill all direct demand, so passengers take indirect routes to reach their destination. To illustrate, if there is unfulfilled demand between Airports A and C but routes A&lt;-&gt;B and B&lt;-&gt;C exist, passengers between A and C will try to travel A&lt;-&gt;B and B&lt;-&gt;C. This can result in actual passenger volume surpassing the direct demand of a route many times over, especially between major hubs, as passengers use the route as part of their transit to their ultimate destination. Unlike direct demand, indirect demand is not listed and can only be estimated.</p>
 <p>Indirect demand is met by connecting flights and/or shuttles - transfers will prioritize player and player alliance airlines equally, and then non-alliance airlines. The</p>
 <p>passenger map</p>
 <p>of a route will display indirect demand being fulfilled. Routes from other airlines are in white-gray lines, alliance will be in orange lines, and your routes will be in a purple-pink line.</p>
-<p>Note that not all airports allow passengers arriving from a foreign country to take a transfer to another foreign country (international transfers - Sixth Freedom of The Air); only countries with openness >= "Open market" would allow it.</p>
+<p>Note that not all airports allow passengers arriving from a foreign country to take a transfer to another foreign country (international transfers - Sixth Freedom of The Air); only countries with openness &gt;= "Open market" would allow it.</p>
 <h4>General Transit</h4>
 <p>A new feature that removes shuttles, and lets passengers from nearby airports (within 50km) move between the two locations. There is a limit for each airport, which is 10,000 times the scale of the smallest airport. This span also allows airports that are in different countries that have a relationship of 2 or higher.</p>
 <h3>Passenger Types</h3>
@@ -113,16 +111,14 @@ Elite
 </li>
 </ul>
 <h2>Gallery</h2>
-<p>Original content from</p>
-<p>Airline Club Wiki</p>
-<p>. Licensed under CC-BY-SA.</p>
-    </main>
 
-    <footer class="footer">
-        <p>Original content from Airline Club Wiki. Licensed under CC-BY-SA.</p>
-        <p style="margin-top: 10px;">For more information about the Airline-Club game, visit <a href="https://www.airline-club.com/" target="_blank" rel="noopener noreferrer">www.airline-club.com</a></p>
-    </footer>
 
-    <script src="../assets/js/main.js"></script>
+
+</main>
+<footer class="footer">
+<p>Original content from <a href="https://airline-club.fandom.com/wiki/Airline_Club_Wiki" rel="noopener noreferrer" target="_blank">Airline Club Wiki</a>. Licensed under CC-BY-SA.</p>
+<p style="margin-top: 10px;">For more information about the Airline-Club game, visit <a href="https://www.airline-club.com/" rel="noopener noreferrer" target="_blank">www.airline-club.com</a></p>
+</footer>
+<script src="../assets/js/main.js"></script>
 </body>
 </html>
