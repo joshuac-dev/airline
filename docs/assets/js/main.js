@@ -95,13 +95,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Mobile menu toggle (if needed in future)
+// Mobile menu toggle
 function toggleMobileMenu() {
     const navbarNav = document.querySelector('.navbar-nav');
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
     if (navbarNav) {
         navbarNav.classList.toggle('active');
+        // Update hamburger icon
+        if (menuToggle) {
+            menuToggle.textContent = navbarNav.classList.contains('active') ? '✕' : '☰';
+        }
     }
 }
+
+// Mobile breakpoint constant (matches CSS media query)
+const MOBILE_BREAKPOINT = 768;
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    const navbar = document.querySelector('.navbar');
+    const navbarNav = document.querySelector('.navbar-nav');
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    
+    if (navbarNav && navbarNav.classList.contains('active')) {
+        if (!navbar.contains(e.target)) {
+            navbarNav.classList.remove('active');
+            if (menuToggle) {
+                menuToggle.textContent = '☰';
+            }
+        }
+    }
+});
+
+// Close mobile menu when clicking a nav link
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.navbar-nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const navbarNav = document.querySelector('.navbar-nav');
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            if (navbarNav && window.innerWidth <= MOBILE_BREAKPOINT) {
+                navbarNav.classList.remove('active');
+                if (menuToggle) {
+                    menuToggle.textContent = '☰';
+                }
+            }
+        });
+    });
+});
 
 // Utility: Highlight current page in navigation
 document.addEventListener('DOMContentLoaded', () => {
