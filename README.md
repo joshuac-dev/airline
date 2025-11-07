@@ -11,6 +11,11 @@ Version 2.1 released at https://v2.airline-club.com
 
 
 
+## Documentation
+
+- [Staff Requirements by Route Type](docs/STAFF_REQUIREMENTS.md) - Detailed documentation of office staff requirements
+- [Staff Requirements Quick Reference](docs/STAFF_REQUIREMENTS_QUICK_REF.md) - Quick reference table for staff requirements
+
 ## Setup
 1. install git :D of course
 1. clone this repo ;D , to setup for V2 use `git checkout v2`
