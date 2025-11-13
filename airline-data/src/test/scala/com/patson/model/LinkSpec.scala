@@ -44,4 +44,121 @@ class LinkSpec(_system: ActorSystem) extends TestKit(_system) with ImplicitSende
       assert(airline1Link.frequencyByClass(FIRST) == 10)
     }
   }
+
+  "staffScheme".must {
+    "have correct basic staff for SHORT_HAUL_DOMESTIC".in {
+      val breakdown = Link.staffScheme(FlightType.SHORT_HAUL_DOMESTIC)
+      assert(breakdown.basic == 8)
+      assert(breakdown.perFrequency == 0.8)
+      assert(breakdown.per1000Pax == 2)
+    }
+
+    "have correct basic staff for MEDIUM_HAUL_DOMESTIC".in {
+      val breakdown = Link.staffScheme(FlightType.MEDIUM_HAUL_DOMESTIC)
+      assert(breakdown.basic == 10)
+      assert(breakdown.perFrequency == 0.8)
+      assert(breakdown.per1000Pax == 2)
+    }
+
+    "have correct basic staff for LONG_HAUL_DOMESTIC".in {
+      val breakdown = Link.staffScheme(FlightType.LONG_HAUL_DOMESTIC)
+      assert(breakdown.basic == 12)
+      assert(breakdown.perFrequency == 0.8)
+      assert(breakdown.per1000Pax == 2)
+    }
+
+    "have correct basic staff for SHORT_HAUL_INTERNATIONAL".in {
+      val breakdown = Link.staffScheme(FlightType.SHORT_HAUL_INTERNATIONAL)
+      assert(breakdown.basic == 10)
+      assert(breakdown.perFrequency == 0.8)
+      assert(breakdown.per1000Pax == 2)
+    }
+
+    "have correct basic staff for MEDIUM_HAUL_INTERNATIONAL".in {
+      val breakdown = Link.staffScheme(FlightType.MEDIUM_HAUL_INTERNATIONAL)
+      assert(breakdown.basic == 15)
+      assert(breakdown.perFrequency == 0.8)
+      assert(breakdown.per1000Pax == 2)
+    }
+
+    "have correct basic staff for LONG_HAUL_INTERNATIONAL".in {
+      val breakdown = Link.staffScheme(FlightType.LONG_HAUL_INTERNATIONAL)
+      assert(breakdown.basic == 20)
+      assert(breakdown.perFrequency == 0.8)
+      assert(breakdown.per1000Pax == 2)
+    }
+
+    "have correct basic staff for SHORT_HAUL_INTERCONTINENTAL".in {
+      val breakdown = Link.staffScheme(FlightType.SHORT_HAUL_INTERCONTINENTAL)
+      assert(breakdown.basic == 15)
+      assert(breakdown.perFrequency == 1.2)
+      assert(breakdown.per1000Pax == 3)
+    }
+
+    "have correct basic staff for MEDIUM_HAUL_INTERCONTINENTAL".in {
+      val breakdown = Link.staffScheme(FlightType.MEDIUM_HAUL_INTERCONTINENTAL)
+      assert(breakdown.basic == 25)
+      assert(breakdown.perFrequency == 1.2)
+      assert(breakdown.per1000Pax == 3)
+    }
+
+    "have correct basic staff for LONG_HAUL_INTERCONTINENTAL".in {
+      val breakdown = Link.staffScheme(FlightType.LONG_HAUL_INTERCONTINENTAL)
+      assert(breakdown.basic == 30)
+      assert(breakdown.perFrequency == 1.6)
+      assert(breakdown.per1000Pax == 4)
+    }
+
+    "have correct basic staff for ULTRA_LONG_HAUL_INTERCONTINENTAL".in {
+      val breakdown = Link.staffScheme(FlightType.ULTRA_LONG_HAUL_INTERCONTINENTAL)
+      assert(breakdown.basic == 30)
+      assert(breakdown.perFrequency == 1.6)
+      assert(breakdown.per1000Pax == 4)
+    }
+  }
+
+  "getOfficeStaffBreakdown".must {
+    "calculate correct staff for short-haul domestic route".in {
+      val frequency = 7
+      val capacity = LinkClassValues.getInstance(1400, 0, 0)
+      val link = Link(fromAirport, toAirport, testAirline1, defaultPrice, distance = 500, capacity, rawQuality = 0, 600, frequency, FlightType.SHORT_HAUL_DOMESTIC)
+      
+      val breakdown = link.getOfficeStaffBreakdown(fromAirport, toAirport, frequency, capacity)
+      
+      // Basic: 8, Frequency: 0.8 * 7 = 5.6, Capacity: 2 * 1.4 = 2.8
+      // Total: (8 + 5.6 + 2.8) * 1.0 = 16.4 = 16
+      assert(breakdown.basicStaff == 8)
+      assert(breakdown.frequencyStaff == 5.6)
+      assert(breakdown.capacityStaff == 2.8)
+      assert(breakdown.total == 16)
+    }
+
+    "calculate correct staff for long-haul intercontinental route".in {
+      val frequency = 14
+      val capacity = LinkClassValues.getInstance(4200, 0, 0)
+      val link = Link(fromAirport, toAirport, testAirline1, defaultPrice, distance = 10000, capacity, rawQuality = 0, 600, frequency, FlightType.LONG_HAUL_INTERCONTINENTAL)
+      
+      val breakdown = link.getOfficeStaffBreakdown(fromAirport, toAirport, frequency, capacity)
+      
+      // Basic: 30, Frequency: 1.6 * 14 = 22.4, Capacity: 4 * 4.2 = 16.8
+      // Total: (30 + 22.4 + 16.8) * 1.0 = 69.2 = 69
+      assert(breakdown.basicStaff == 30)
+      assert(breakdown.frequencyStaff == 22.4)
+      assert(breakdown.capacityStaff == 16.8)
+      assert(breakdown.total == 69)
+    }
+
+    "return zero staff for zero frequency".in {
+      val frequency = 0
+      val capacity = LinkClassValues.getInstance(0, 0, 0)
+      val link = Link(fromAirport, toAirport, testAirline1, defaultPrice, distance = 500, capacity, rawQuality = 0, 600, frequency, FlightType.SHORT_HAUL_DOMESTIC)
+      
+      val breakdown = link.getOfficeStaffBreakdown(fromAirport, toAirport, frequency, capacity)
+      
+      assert(breakdown.basicStaff == 0)
+      assert(breakdown.frequencyStaff == 0)
+      assert(breakdown.capacityStaff == 0)
+      assert(breakdown.total == 0)
+    }
+  }
 }
