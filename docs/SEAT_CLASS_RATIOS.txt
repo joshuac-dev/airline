@@ -1,0 +1,28 @@
+AIRCRAFT SEAT CLASS SPACE RATIOS - QUICK REFERENCE
+===================================================
+
+Question: How many economy seats does each class replace?
+
+ANSWER:
+-------
+✓ 1 Business Class seat = 2.5 Economy seats
+✓ 1 First Class seat    = 6 Economy seats
+
+This means:
+- Business class uses 2.5x the space of economy
+- First class uses 6x the space of economy
+
+Example: Aircraft with 300 space units
+---------------------------------------
+All Economy:   300 seats
+All Business:  120 seats (120 × 2.5 = 300)
+All First:      50 seats (50 × 6 = 300)
+
+Mixed Config:
+  10 First    (60 space)
++ 20 Business (50 space)
++ 190 Economy (190 space)
+= 300 total space units
+
+For detailed documentation, see: docs/SEAT_CONFIGURATION.md
+Code reference: airline-data/src/main/scala/com/patson/model/Link.scala (lines 322-360)
