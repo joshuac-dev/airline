@@ -319,15 +319,42 @@ case class CostStoreProvider() extends CostProvider {
 }
 
 
+/**
+ * Represents a cabin class (Economy, Business, or First) with associated multipliers.
+ * 
+ * Key Multipliers:
+ * - spaceMultiplier: Physical space required relative to economy (e.g., 2.5 means 2.5x economy space)
+ *   * Answers: "How many economy seats does this class replace?"
+ *   * Economy: 1.0 (baseline)
+ *   * Business: 2.5 (1 business seat replaces 2.5 economy seats)
+ *   * First: 6.0 (1 first class seat replaces 6 economy seats)
+ * 
+ * - resourceMultiplier: Operational resources (crew, amenities) required per seat
+ * - priceMultiplier: Typical pricing ratio compared to economy fares
+ * - priceSensitivity: How sensitive passengers are to price changes (lower = less sensitive)
+ * 
+ * @param code IATA booking code (F=First, J=Business, Y=Economy)
+ * @param spaceMultiplier Physical space multiplier relative to economy
+ * @param resourceMultiplier Operational resource multiplier
+ * @param priceMultiplier Price multiplier relative to economy
+ * @param priceSensitivity Price sensitivity factor (0-1 scale)
+ * @param level Numeric level for sorting (3=First, 2=Business, 1=Economy)
+ */
 sealed abstract class LinkClass(val code : String, val spaceMultiplier : Double, val resourceMultiplier : Double, val priceMultiplier : Double, val priceSensitivity : Double, val level : Int) {
   def label : String //level for sorting/comparison purpose
 }
+
+/** First class: 1 seat replaces 6 economy seats (spaceMultiplier = 6) */
 case object FIRST extends LinkClass("F", spaceMultiplier = 6, resourceMultiplier = 3, priceMultiplier = 9, priceSensitivity = 0.8, level = 3) {
   override def label = "first"
 }
+
+/** Business class: 1 seat replaces 2.5 economy seats (spaceMultiplier = 2.5) */
 case object BUSINESS extends LinkClass("J", spaceMultiplier = 2.5, resourceMultiplier = 2, priceMultiplier = 3, priceSensitivity = 0.9, level = 2) {
   override def label = "business"
 }
+
+/** Economy class: baseline space multiplier of 1 */
 case object ECONOMY extends LinkClass("Y", spaceMultiplier = 1, resourceMultiplier = 1, priceMultiplier = 1, priceSensitivity = 1, level =1) {
   override def label = "economy"
 }

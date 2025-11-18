@@ -25,6 +25,46 @@ class LinkSpec(_system: ActorSystem) extends TestKit(_system) with ImplicitSende
 
 
 
+  "spaceMultiplier".must {
+    "correctly define how many economy seats each class replaces".in {
+      // Economy is the baseline with spaceMultiplier = 1
+      assert(ECONOMY.spaceMultiplier == 1.0)
+      
+      // Business class seat replaces 2.5 economy seats
+      assert(BUSINESS.spaceMultiplier == 2.5)
+      
+      // First class seat replaces 6 economy seats
+      assert(FIRST.spaceMultiplier == 6.0)
+    }
+    
+    "correctly calculate aircraft capacity trade-offs".in {
+      // If an aircraft has 300 space units:
+      val totalCapacity = 300.0
+      
+      // All economy: 300 seats (300 * 1.0 = 300 space units)
+      val allEconomySeats = (totalCapacity / ECONOMY.spaceMultiplier).toInt
+      assert(allEconomySeats == 300)
+      
+      // All business: 120 seats (120 * 2.5 = 300 space units)
+      val allBusinessSeats = (totalCapacity / BUSINESS.spaceMultiplier).toInt
+      assert(allBusinessSeats == 120)
+      
+      // All first: 50 seats (50 * 6.0 = 300 space units)
+      val allFirstSeats = (totalCapacity / FIRST.spaceMultiplier).toInt
+      assert(allFirstSeats == 50)
+      
+      // Mixed configuration example:
+      // 10 first (60 space) + 20 business (50 space) + 190 economy (190 space) = 300 space
+      val mixedFirst = 10
+      val mixedBusiness = 20
+      val mixedEconomy = 190
+      val mixedTotal = (mixedFirst * FIRST.spaceMultiplier + 
+                       mixedBusiness * BUSINESS.spaceMultiplier + 
+                       mixedEconomy * ECONOMY.spaceMultiplier)
+      assert(mixedTotal == totalCapacity)
+    }
+  }
+
   "frequencyByClass".must {
     "compute correct frequency".in {
 
