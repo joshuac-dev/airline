@@ -25,9 +25,12 @@ This document provides a detailed technical analysis of the Airline Club simulat
 
 ```scala
 // From PassengerSimulation.scala
-def passengerConsume(demand: List[(PassengerGroup, Airport, Int)], 
-                     links: List[Transport]): PassengerConsumptionResult
+// Generic function that accepts any Transport type (including Link)
+def passengerConsume[T <: Transport](demand: List[(PassengerGroup, Airport, Int)], 
+                                     links: List[T]): PassengerConsumptionResult
 ```
+
+**Note**: The function is generic and accepts any Transport subtype, including `Link` (flights) and other transport types.
 
 #### Phase 1: Active Airport Identification
 ```scala
@@ -471,12 +474,12 @@ val revenue = consumptionResult
 
 ```scala
 // From LinkSimulation.scala
-private val FUEL_UNIT_COST = 0.0043
-private val CREW_UNIT_COST = 12
+private val FUEL_UNIT_COST = 0.0043  // Per fuel unit (gallon equivalent)
+private val CREW_UNIT_COST = 12      // Per crew member per flight segment
 
 // Total cost calculation
 val fuelCost = calculateFuelCost(distance, airplane)
-val crewCost = CREW_UNIT_COST * crewRequired
+val crewCost = CREW_UNIT_COST * crewRequired  // crewRequired = crew count × frequency
 val maintenanceCost = calculateMaintenance(airplane, distance)
 val airportFees = calculateAirportFees(from, to)
 val depreciation = calculateDepreciation(airplane)
@@ -484,6 +487,8 @@ val depreciation = calculateDepreciation(airplane)
 val totalCost = fuelCost + crewCost + maintenanceCost + 
                 airportFees + depreciation
 ```
+
+**Clarification**: CREW_UNIT_COST is the cost per crew member per flight. Total crew cost equals the number of crew members required for the aircraft type multiplied by the flight frequency.
 
 #### Fuel Cost Calculation
 

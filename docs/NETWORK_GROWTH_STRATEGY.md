@@ -73,10 +73,18 @@ Link quality (`Link.computedQuality`) is calculated from:
 - **Airplane Condition** (20%): Aircraft maintenance state
 
 ```scala
-// From Link.scala (line 74)
-computedQualityStore = (rawQuality.toDouble / Link.MAX_QUALITY * 30 + 
-                        airline.airlineInfo.currentServiceQuality / Airline.MAX_SERVICE_QUALITY * 50 + 
-                        airplaneConditionQuality).toInt
+// From Link.scala (lines 71-74, simplified for clarity)
+// Airplane condition quality component (20% of total)
+val airplaneConditionQuality = inServiceAirplanes.map {
+  case (airplane, assignment) => 
+    airplane.condition / Airplane.MAX_CONDITION * assignment.frequency
+}.sum / frequency * 20
+
+// Final computed quality (0-100 scale)
+computedQualityStore = (rawQuality / Link.MAX_QUALITY * 30 +       // 30% weight
+                        airline.airlineInfo.currentServiceQuality / 
+                        Airline.MAX_SERVICE_QUALITY * 50 +           // 50% weight
+                        airplaneConditionQuality).toInt              // 20% weight
 ```
 
 ### Distance and Flight Type Classification
