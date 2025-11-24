@@ -32,6 +32,18 @@ Self notes, too much trouble for other people to set it up right now. Just do NO
 For the banners to work properly, need to setup google photo API. Download the oauth json and put it under airline-web/conf. Then run the app, the log should show an oauth url, use it, then it should generate a token under airline-web/google-tokens. Now for server deployment, copy the oauth json `google-oauth-credentials.json` to `conf` AND the google-tokens (as folder) to the root of `airline-web`. 
 
 
+## Documentation
+
+### Network Growth Strategy Analysis
+
+Comprehensive documentation on optimal strategies for building and expanding airline networks is available in the `/docs` directory:
+
+- **[Executive Summary](docs/EXECUTIVE_SUMMARY.md)** - Quick strategic overview and recommendations
+- **[Network Growth Strategy](docs/NETWORK_GROWTH_STRATEGY.md)** - Complete strategic playbook (35,000+ words)
+- **[Technical Analysis](docs/TECHNICAL_ANALYSIS.md)** - Deep dive into code mechanics and algorithms
+
+These documents provide extensive analysis of both alliance and non-alliance growth strategies, backed by detailed examination of the game's source code and mechanics.
+
 ## Attribution
 1. Some icons by [Yusuke Kamiyamane](http://p.yusukekamiyamane.com/). Licensed under a [Creative Commons Attribution 3.0 License](http://creativecommons.org/licenses/by/3.0/)
 1. Flag icons by [famfamfam](https://github.com/legacy-icons/famfamfam-flags)
