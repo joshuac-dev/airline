@@ -1,6 +1,6 @@
 # Transfer Costs - Quick Summary
 
-> For the full comprehensive analysis, see [TRANSFER_COSTS_ANALYSIS.md](../TRANSFER_COSTS_ANALYSIS.md) in the repository root.
+> For the full comprehensive analysis, see [TRANSFER_COSTS_ANALYSIS.md](../TRANSFER_COSTS_ANALYSIS.md) in the repository root (one directory up from docs/).
 
 ## What Are Transfer Costs?
 
@@ -114,4 +114,4 @@ For detailed analysis including:
 - ROI calculations for infrastructure
 - Developer recommendations
 
-See the full document: [TRANSFER_COSTS_ANALYSIS.md](../TRANSFER_COSTS_ANALYSIS.md)
+**See the full document**: [TRANSFER_COSTS_ANALYSIS.md](../TRANSFER_COSTS_ANALYSIS.md) (located in repository root)

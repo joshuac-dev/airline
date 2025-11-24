@@ -357,11 +357,13 @@ assetDiscountByAirportId.getOrElseUpdate(linkConsideration.to.id,
 
 ```scala
 if (previousLinkAirlineId != currentLinkAirlineId && 
-    (allianceIdByAirlineId.get(previousLinkAirlineId) == null.asInstanceOf[Int] || 
+    (allianceIdByAirlineId.get(previousLinkAirlineId) == null || 
      allianceIdByAirlineId.get(previousLinkAirlineId) != allianceIdByAirlineId.get(currentLinkAirlineId))) {
   connectionCost += 75
 }
 ```
+
+**Note**: The actual code uses Java's `HashMap` where `null` is a valid value. The `.asInstanceOf[Int]` cast is used in the original Scala code to handle Java null semantics.
 
 **Logic**:
 - If airlines are different BUT belong to the same **established alliance**, the 75-point airline switching penalty is waived
@@ -1266,5 +1268,4 @@ Transfer costs are a sophisticated and well-balanced game mechanic that creates 
 
 *Document Version 1.0*  
 *Date: 2025-11-24*  
-*Analysis based on commit: 6160503*  
-*Repository: joshuac-dev/airline*
+*Analysis based on commit: 6160503*
