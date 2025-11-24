@@ -431,4 +431,15 @@ The airline game implements a sophisticated frequency system with the following 
 - **Intercontinental**: 50-100% higher staff costs limit high-frequency viability
 - **Ultra Long-haul**: Highest costs, lowest optimal frequency
 
+### Critical Numerical Thresholds (Quick Reference)
+- **3 flights/week**: Budget passenger neutral point (SimplePreference)
+- **6 flights/week**: Budget passenger max benefit threshold
+- **14 flights/week**: Time-sensitive/quality passenger neutral point (HIGH_FREQUENCY_THRESHOLD)
+- **28 flights/week**: Absolute maximum passenger appeal benefit (2× threshold)
+- **50% load factor**: Warning threshold for competitive routes (3+ airlines)
+- **52 weeks**: Duration of low load factor before route license revocation
+- **0.8 staff/flight**: Domestic and international route staff requirement
+- **1.2 staff/flight**: Short/medium intercontinental staff requirement (+50%)
+- **1.6 staff/flight**: Long/ultra long intercontinental staff requirement (+100%)
+
 This analysis confirms that the game design creates natural incentives to avoid excessive frequency through diminishing returns rather than explicit penalties.

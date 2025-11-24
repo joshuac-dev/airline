@@ -80,39 +80,73 @@
 
 ## Frequency Decision Framework
 
-### Should I increase frequency?
+### Decision Flowchart for Increasing Frequency
 
 ```
-1. Is current frequency < 14? 
-   → YES: Increase to 14 for neutral passenger perception
-   
-2. Is current frequency 14-27 AND load factor > 70%?
-   → YES: Increase toward 28 for maximum passenger appeal
-   
-3. Is current frequency 28+ AND load factor > 80%?
-   → MAYBE: Consider if additional capacity justifies the costs
-   
-4. Is route intercontinental with frequency > 21?
-   → CAUTION: High staff costs may reduce profitability
-   
-5. Is load factor < 70%?
-   → NO: Focus on marketing and pricing, not frequency
+                    START
+                      |
+                      v
+           Is frequency < 14? -------YES-----> [INCREASE TO 14]
+                      |                              |
+                      NO                             v
+                      |                          [SUCCESS]
+                      v
+      Is frequency 14-27 AND LF > 70%? --YES--> [INCREASE TOWARD 28]
+                      |                              |
+                      NO                             v
+                      |                       [MONITOR LF]
+                      v
+      Is frequency 28+ AND LF > 80%? ---YES--> [CONSIDER CAREFULLY]
+                      |                         (diminishing returns)
+                      NO                             |
+                      |                              v
+                      v                     [EVALUATE PROFIT]
+           Is route intercontinental                 |
+           with frequency > 21? ----YES----> [CAUTION: High costs]
+                      |                              |
+                      NO                             v
+                      |                      [MAYBE INCREASE]
+                      v
+             Is LF < 70%? ------YES-----> [DO NOT INCREASE]
+                      |                   Focus on marketing
+                      NO
+                      |
+                      v
+               [MAINTAIN CURRENT]
+
+Legend: LF = Load Factor
 ```
 
-### Should I decrease frequency?
+### Decision Flowchart for Decreasing Frequency
 
 ```
-1. Is load factor < 50% for several weeks?
-   → YES: Reduce immediately to avoid license revocation risk
-   
-2. Is route profitable but frequency > 28?
-   → MAYBE: Test reducing to 28 (no passenger appeal loss)
-   
-3. Is route intercontinental with frequency > 21 and marginal profits?
-   → YES: High staff costs may be eating profits
-   
-4. Do I have better uses for the airplanes?
-   → YES: Redeploy to more profitable routes
+                    START
+                      |
+                      v
+         Is LF < 50% for weeks? ---YES----> [DECREASE URGENTLY]
+                      |                    (license risk!)
+                      NO                         |
+                      |                          v
+                      v                    [REDUCE TO SAFE LF]
+      Is frequency > 28 and profitable? --YES--> [TEST REDUCTION]
+                      |                      (no appeal loss)
+                      NO                         |
+                      |                          v
+                      v                    [MONITOR RESULTS]
+      Is route intercontinental with              |
+      frequency > 21 and low profit? ---YES---->[REDUCE FREQUENCY]
+                      |                      (high staff costs)
+                      NO                         |
+                      |                          v
+                      v                     [IMPROVE PROFIT]
+      Better uses for airplanes? ---YES-----> [REDEPLOY ASSETS]
+                      |                            |
+                      NO                           v
+                      |                     [REALLOCATE FLEET]
+                      v
+            [MAINTAIN CURRENT]
+
+Legend: LF = Load Factor
 ```
 
 ## Key Takeaways

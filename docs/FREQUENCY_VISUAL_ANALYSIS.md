@@ -12,29 +12,29 @@ The following shows how frequency affects the cost multiplier applied to standar
 Cost Multiplier (lower is better for passengers)
 1.20 |                                    Simple Preference (2% sensitivity)
      |                                    
-1.15 | *                                  Speed Preference (15% sensitivity)
-     | | *                                
-1.10 | | |*                               Appeal Preference (5% sensitivity)
-     | | | *                              
-1.05 | | | |*
-     | | | | *
-1.00 | ======*================================ Neutral (standard price)
-     | | | | | *
-0.95 | | | | |  *
-     | | | | |   *
-0.90 | | | |*|    *
-     | | | * |     *
-0.85 | | | | |      ********************** Speed (max benefit at 28)
-     | | | | |                   *
-0.80 | * | | |                    *  Simple (max benefit at 6)
+1.15 | S                                  Speed Preference (15% sensitivity)
+     | | S                                
+1.10 | | |A                               Appeal Preference (5% sensitivity)
+     | | | A                              
+1.05 | | | |A
+     | | | | A
+1.00 | ======A================================ Neutral (standard price)
+     | | | | | A
+0.95 | | | | |  A
+     | | | | |   A
+0.90 | | | |A|    A
+     | | | A |     A
+0.85 | | | | |      SSSSSSSSSSSSSSSSSSSSSS Speed (max benefit at 28)
+     | | | | |                   S
+0.80 | S | | |                    S  Simple (max benefit at 6)
      +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--
      0  3  6  9  12 15 18 21 24 27 30 33 36 39 42 45
                     Frequency (flights per week)
 
 Legend:
-* = Simple Preference (Budget/Carefree passengers)
+S = Simple Preference (Budget/Carefree passengers)
 | = Speed Preference (Time-sensitive passengers) 
-* = Appeal Preference (Quality-conscious passengers)
+A = Appeal Preference (Quality-conscious passengers)
 = = Neutral threshold
 ```
 
