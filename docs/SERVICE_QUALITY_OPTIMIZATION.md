@@ -320,22 +320,40 @@ expectedQuality = min(incomeLevel, 50) + flightTypeAdjustment
 
 ### Computed Quality
 ```
-computedQuality = (rawQuality/100 × 30) + (serviceQuality/100 × 50) + (airplaneCondition × 20)
+computedQuality = (rawQuality / 100 * 30) + (serviceQuality / 100 * 50) + (airplaneConditionRatio * 20)
+
+Where:
+- rawQuality: Route-specific quality setting (0-100)
+- serviceQuality: Airline's current service quality (0-100)  
+- airplaneConditionRatio: Weighted average airplane condition (0.0-1.0)
 ```
 
 ### Service Funding Weekly Cost
 ```
-cost = (targetQuality/40)^2.5 × (passengerMileCapacity/4000) × 30
+cost = pow(targetQuality / 40, 2.5) * (passengerMileCapacity / 4000) * 30
+
+Where:
+- targetQuality: Target service quality setting (0-100)
+- passengerMileCapacity: Sum of (frequency * planeCapacity * distance) for all routes
+- Minimum passengerMileCapacity is 1,000,000
 ```
 
 ### Inflight Cost per Passenger
 ```
-star = rawQuality ÷ 20
-durationCost = [1, 1, 4, 8, 13, 20][star]
-costPerPax = (20 + durationCost × duration/60) × 2
+star = floor(rawQuality / 20)   // Results in 0-5 stars
+durationCostPerHour = lookup[star]  // [1, 1, 4, 8, 13, 20]
+costPerPax = (20 + durationCostPerHour * flightDurationHours) * 2   // Roundtrip
+
+Where:
+- rawQuality: Route-specific quality setting (0-100)
+- flightDurationHours: Flight duration in hours
 ```
 
 ### Quality Expectation
 ```
-expected = min(airportIncomeLevel, 50) + flightTypeAdjustment[linkClass]
+expected = min(airportIncomeLevel, 50) + flightTypeAdjustment(linkClass)
+
+Where:
+- airportIncomeLevel: Income level of departure airport
+- flightTypeAdjustment: Adjustment based on flight type and cabin class (see table above)
 ```
