@@ -335,19 +335,98 @@ This means struggling routes have up to **52 cycles (1 year)** to improve before
 
 From the codebase analysis:
 
+### Core Simulation Constants
+
 | Constant | Value | Location |
 |----------|-------|----------|
 | Cycle Duration | 30 minutes | `MainSimulation.CYCLE_DURATION` |
+| Consumption Cycles | 10 max | `PassengerSimulation.consumptionCycleMax` |
+| Base Demand Chunk Size | 10 pax | `DemandGenerator.baseDemandChunkSize` |
+
+### Loyalty System Constants
+
+| Constant | Value | Location |
+|----------|-------|----------|
 | Loyalty Decay Rate | 0.0005 (0.05%) | `AirportSimulation.DECAY_RATE` |
 | Neutral Satisfaction | 0.6 | `AirportSimulation.NEUTRAL_SATISFACTION` |
 | Max Loyalist Flip Ratio | 1.0 | `AirportSimulation.MAX_LOYALIST_FLIP_RATIO` |
+| Max Loyalty | 100 | `AirlineAppeal.MAX_LOYALTY` |
+
+### Passenger Route Selection Constants
+
+| Constant | Value | Location |
+|----------|-------|----------|
 | Route Cost Tolerance | 1.5x | `PassengerSimulation.ROUTE_COST_TOLERANCE_FACTOR` |
 | Link Cost Tolerance | 0.9x | `PassengerSimulation.LINK_COST_TOLERANCE_FACTOR` |
 | Route Distance Tolerance | 2.5x | `PassengerSimulation.ROUTE_DISTANCE_TOLERANCE_FACTOR` |
+| Max Satisfaction Price Ratio | 0.7 | `Computation.MAX_SATISFACTION_PRICE_RATIO_THRESHOLD` |
+| Min Satisfaction Price Ratio | 1.55 | `Computation.MIN_SATISFACTION_PRICE_RATIO_THRESHOLD` |
+
+### Load Factor Alert Constants
+
+| Constant | Value | Location |
+|----------|-------|----------|
 | Load Factor Alert Threshold | 50% | `LinkSimulation.LOAD_FACTOR_ALERT_THRESHOLD` |
 | Alert Duration | 52 cycles | `LinkSimulation.LOAD_FACTOR_ALERT_DURATION` |
-| Consumption Cycles | 10 max | `PassengerSimulation.consumptionCycleMax` |
-| Base Demand Chunk Size | 10 pax | `DemandGenerator.baseDemandChunkSize` |
+| Minimum Competitors for Alert | 3 | `LinkSimulation.LOAD_FACTOR_ALERT_LINK_COUNT_THRESHOLD` |
+
+### Link Quality Constants
+
+| Constant | Value | Location |
+|----------|-------|----------|
+| Max Link Quality | 100 | `Link.MAX_QUALITY` |
+| High Frequency Threshold | 14 | `Link.HIGH_FREQUENCY_THRESHOLD` |
+| Link Negotiation Cooldown | 6 cycles | `Link.LINK_NEGOTIATION_COOL_DOWN` |
+
+### Flight Type Distance Thresholds
+
+| Flight Type | Domestic | International | Intercontinental |
+|-------------|----------|---------------|------------------|
+| Short-haul | ≤ 1,000 km | ≤ 2,000 km | ≤ 2,000 km |
+| Medium-haul | 1,001-3,000 km | 2,001-4,000 km | 2,001-5,000 km |
+| Long-haul | > 3,000 km | > 4,000 km | 5,001-12,000 km |
+| Ultra Long-haul | - | - | > 12,000 km |
+
+---
+
+## Appendix: Passenger Satisfaction Formula
+
+Passenger satisfaction is crucial for loyalty gain. The formula works as follows:
+
+```
+satisfaction = (MIN_THRESHOLD - cost_ratio) / (MIN_THRESHOLD - MAX_THRESHOLD)
+
+Where:
+- cost_ratio = perceived_cost / standard_price
+- MAX_THRESHOLD = 0.7 (100% satisfaction if cost ≤ 70% of standard)
+- MIN_THRESHOLD = 1.55 (0% satisfaction if cost ≥ 155% of standard)
+```
+
+### Satisfaction Level Examples
+
+| Cost Ratio (vs Standard) | Satisfaction | Loyalty Impact |
+|-------------------------|--------------|----------------|
+| 70% or less | 100% | Maximum loyalty gain |
+| 80% | 88% | High loyalty gain |
+| 90% | 76% | Good loyalty gain |
+| 100% | 65% | Moderate loyalty gain |
+| 110% | 53% | Low loyalty gain |
+| 120% | 41% | Very low loyalty gain |
+| 155% or more | 0% | No loyalty gain |
+
+---
+
+## Appendix: Quality Composition
+
+Link quality is composed of three factors:
+
+1. **Raw Quality Setting (30%)** - Player-set quality level (1-5 stars → 0-100 raw quality)
+2. **Airline Service Quality (50%)** - Overall airline service quality level
+3. **Airplane Condition (20%)** - Average condition of assigned aircraft
+
+```
+computedQuality = (rawQuality/100 * 30) + (serviceQuality/100 * 50) + (avgAirplaneCondition/100 * 20)
+```
 
 ---
 
