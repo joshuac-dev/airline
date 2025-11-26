@@ -282,8 +282,11 @@ Airlines in low-openness countries face severe limitations in building efficient
    - Use your home country base for local operations only
 
 4. **Monitor Country Relationship**
-   - Build relationship with your home country to offset some negotiation penalties
-   - Relationship bonuses can partially compensate for openness penalties
+   - Build relationship with target countries to improve negotiation odds
+   - Country relationship provides negotiation discounts per `NegotiationUtil.scala` (lines 327-343):
+     - Positive relationship: Up to 0.4 (40%) discount on negotiation requirements
+     - Negative relationship: Additional 0.1× penalty per relationship point
+   - Note: This discount applies to overall negotiation difficulty, not the specific openness penalties
 
 ### Strategic Planning
 
@@ -326,8 +329,8 @@ From `openness.csv`, showing the calculated openness based on ease of doing busi
 | Hong Kong | 5 | 10 |
 | United Kingdom | 6 | 10 |
 | United States | 7 | 10 |
-| Sweden | 8-9 | 10 |
-| Norway | 8-9 | 10 |
+| Sweden | 9 | 10 |
+| Norway | 8 | 10 |
 | Finland | 10 | 10 |
 | ... | ... | ... |
 | Countries ranked ~120-140 | | 4-5 |
@@ -352,4 +355,4 @@ While point-to-point operations remain viable, the strategic value of such bases
 ---
 
 *Document generated based on code analysis of the Airline Club game repository.*
-*Last updated: 2025*
+*Last updated: November 2025*
